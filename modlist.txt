@@ -1,1 +1,1 @@
-ExampleAPI (SpeedrunTimer)|http://modthegungeon.github.io/backends/ExampleAPI.zip
+ExampleAPI|http://modthegungeon.github.io/backends/ExampleAPI.zip
