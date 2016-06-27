@@ -1,0 +1,26 @@
+<div id="title"><h2>
+	Mod the Gungeon Tutorial: Installing Mods
+</h2></div>
+
+<div id="prerequisites_header"><h4>
+	Prerequisites:
+</h4></div>
+
+<div id="prerequisites_list"><ul>
+	<li>ETGMod.Installer: <a href="https://github.com/ModTheGungeon/ETGMod.Installer/releases">Download</a></li>
+</ul></div>
+
+<div id="body">
+	<p>Before reading this, make sure that you've <a href="../../installing">installed the base backend, ETGMod</a>.</p>
+	<p>The game loads mods from the <code>Mods</code> directory in the game's data. In the case of the Steam version, these are the paths:</p>
+	<ul>
+                <li>Windows: <ul>
+                        <li>32bit: <code>C:\Program Files\Steam\steamapps\common\Enter the Gungeon\Mods</code></li>
+                        <li>64bit: <code>C:\Program Files (x86)\Steam\steamapps\common\Enter the Gungeon\Mods</code></li>
+                </ul></li>
+                <li>Linux: <code>~/.local/share/Steam/steamapps/common/Enter the Gungeon/Mods</code></li>
+        </ul>
+        <p>If the <code>Mods</code> directory doesn't exist, create it. You can put your mods (not backends!) in the directory; both in the form of <code>.zip</code>s and normal folders. Optionally you can create a file called <code>mods.txt</code> in the <code>Mods</code> directory and specify the order of loading mods, with each path on each line (if you don't understand, just don't do anything, ETGMod will do it for you).</p>
+	<p>Some mods depend on other backends - for example, the mod author might've wanted to add functionality not present in the base ETGMod API. In this case, the mod author probably informed you where to get the needed backend. If not, contact him/her. For a general tutorial on installing backends, <a href="../../backends/installing">click here</a></p>
+	<p>Once the mods and the optional file are in place, you can start Gungeon. Your mods should now work.</p>
+</div>

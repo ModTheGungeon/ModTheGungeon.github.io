@@ -1,0 +1,11 @@
+<div id="title"><h2>
+        Mod the Gungeon Tutorial: Introduction
+</h2></div>
+
+<div id="body">
+        <p>Mod the Gungeon is based on the concept of backends and mods. Backends access the game's code and provide an API for mods to use - sometimes including workarounds or simplifying the usage. Mods, on the other hand, use the APIs (Application Programming Interfaces) provided by backends to add actual features to the game.</p>
+        <p>The very base backend of Mod the Gungeon is ETGMod. It not only implements the standard API but is also responsible for managing both mods and backends; backends implement APIs using the ETGMod API.</p>
+        <p>It's very important to understand this separation, as mods can be loaded during runtime while backends have to be injected into the game using the special installer (ETGMod.Installer).</p>
+        <p>The installer by default installs ETGMod along with selected backends from the repository and has an option for installing backends outside the repository (unsafe, unless you trust the source).</p>
+	<p>You can now move on to <a href="../installing">Installing ETGMod</a>, the base backend.</p>
+</div>
