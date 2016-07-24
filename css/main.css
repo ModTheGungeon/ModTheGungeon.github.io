@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    font-family: "Roboto";
+    font-weight: 200;
+    background: #b8a34f;
+    color: rgba(255, 255, 255, 0.87);
+}
+#content-wrapper {
+    margin: 8px;
+}
+
+h1 {
+    font-weight: 300;
+}

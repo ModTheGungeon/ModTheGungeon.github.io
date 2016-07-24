@@ -1,0 +1,39 @@
+#cover-inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/logo.png") center no-repeat, #402b68;
+}
+
+#cover-outer {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+#cover-outer:before {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    left: calc(50vw - 32px);
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 64px;
+    z-index: 1;
+}
+#cover-outer:after {
+    content: "";
+    position: absolute;
+    bottom: calc(32px + 16px + 4px);
+    left: calc(50vw - 16px);
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid black;
+    z-index: 2;
+}
