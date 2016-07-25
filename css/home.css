@@ -1,19 +1,11 @@
-#cover-inner {
+#cover-logo {
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url("/img/logo_nobullet.png") center no-repeat, #402b68;
+    left: calc(50% - 436px);
+    top: calc(50% - 139px);
+    width: calc(436px * 2);
+    height: calc(139px * 2);
+    background: url("/img/logo_nobullet.png") center no-repeat;
     background-size: calc(436px * 2) calc(139px * 2);
-    image-rendering:optimizeSpeed;             /* Legal fallback */
-    image-rendering:-moz-crisp-edges;          /* Firefox        */
-    image-rendering:-o-crisp-edges;            /* Opera          */
-    image-rendering:-webkit-optimize-contrast; /* Safari         */
-    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
-    image-rendering:crisp-edges;               /* CSS4 Proposed  */
-    image-rendering:pixelated;                 /* CSS4 Proposed  */
-    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
 #cover-bullet {
     position: fixed;
@@ -115,11 +107,21 @@
 }
 
 #cover-outer {
+    background: #402b68;
     margin: 0;
-    width: 100vw;
+    -c-width: 100vw;
     height: 100vh;
     overflow: hidden;
+    image-rendering:optimizeSpeed;             /* Legal fallback */
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    image-rendering:crisp-edges;               /* CSS4 Proposed  */
+    image-rendering:pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 #cover-down {
     position: absolute;
@@ -210,17 +212,4 @@
   90%  {transform: translateX(-3px);}
   96%  {transform: translateX(1px);}
   100% {transform: translateX(2px);}
-}
-@keyframes clip-anim {
-  0%   {clip: rect(62px, 10000vw, 92px, 0);}
-  10%  {clip: rect(12px, 10000vw, 24px, 0);}
-  20%  {clip: rect(42px, 10000vw, 128px, 0);}
-  30%  {clip: rect(34px, 10000vw, 56px, 0);}
-  40%  {clip: rect(70px, 10000vw, 150px, 0);}
-  50%  {clip: rect(150px, 10000vw, 256px, 0);}
-  60%  {clip: rect(128px, 10000vw, 135px, 0);}
-  70%  {clip: rect(80px, 10000vw, 112px, 0);}
-  80%  {clip: rect(50px, 10000vw, 79px, 0);}
-  90%  {clip: rect(20px, 10000vw, 90px, 0);}
-  100% {clip: rect(0, 10000vw, 256px, 0);}
 }
