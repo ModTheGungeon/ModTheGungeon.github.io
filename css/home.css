@@ -152,7 +152,7 @@
     animation: cover-down-pulse-anim-2 2s infinite;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-device-width: 900px) {
     #cover-logo {
         background-image: url("/img/logo.png");
         background-size: 436px 139px;
@@ -161,7 +161,7 @@
         display: none;
     }
 }
-@media (max-width: 500px) {
+@media only screen and (max-device-width: 500px) {
     #cover-logo {
         background-size: calc(436px * 0.5) calc(139px * 0.5);
     }
