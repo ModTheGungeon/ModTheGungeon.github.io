@@ -30,14 +30,14 @@
 .cover-bulletp {
     position: absolute;
     mix-blend-mode: screen;
-    background: url("/img/logo_bullet.png") center no-repeat;
+    background: url("/img/logo_bullet.png");
     background-size: calc(57px * 2) calc(92px * 2);
     width: calc(57px * 2);
     height: calc(92px * 2);
 }
-.cover-bulletp:nth-child(3n+1) { filter: url(#red); }
-.cover-bulletp:nth-child(3n+2) { filter: url(#green); }
-.cover-bulletp:nth-child(3n+3) { filter: url(#blue); }
+.cover-bulletp:nth-child(3n+1) { background-image: url("/img/logo_bullet_r.png"); }
+.cover-bulletp:nth-child(3n+2) { background-image: url("/img/logo_bullet_g.png"); }
+.cover-bulletp:nth-child(3n+3) { background-image: url("/img/logo_bullet_b.png"); }
 .cover-bulletp:nth-child(1) {
           clip-path: inset(  0px 0  150px 0);
   -webkit-clip-path: inset(  0px 0  149px 0);
