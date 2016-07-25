@@ -1,18 +1,125 @@
 body {
-    margin: 0;
-    font-family: "Roboto";
-    font-weight: 200;
-    background: #b8a34f;
-    color: rgba(255, 255, 255, 0.87);
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 200;
+  background: #b8a34f;
+  color: rgba(255, 255, 255, 0.87);
 }
 #main {
-    margin: 8px;
+  display: block;
+  padding: 8px;
+  z-index: 1;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-weight: 300;
+  font-weight: 300;
+}
+
+video {
+  background: black;
+}
+
+#sections {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+section, [warning] {
+  transition: color 0.3s, min-height 0.3s;
+  position: relative;
+  display: block;
+  padding: 4px 16px;
+  border-radius: 3px;
+  min-width: 320px;
+  min-height: 64px;
+  overflow: hidden;
+  z-index: 50;
+  border-top: rgba(255, 255, 255, 0.4) solid 1px;
+  border-bottom: rgba(0, 0, 0, 0.4) solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 6px;
+}
+[warning] {
+  position: absolute;
+  bottom: 128px;
+  left: calc(50% - 256px);
+  width: 512px;
+  background: #fb0d3d;
+}
+section {
+  margin: 8px;
+}
+section:hover {
+  z-index: 60;
+}
+section:nth-child(2n+1) {
+  background: #b84f64;
+}
+section:nth-child(2n+2) {
+  background: #4fb8a3;
+}
+section:nth-child(2n+3) {
+  background: #4f64b8;
+}
+section[mediabg] {
+  background: black;
+}
+
+section [media] {
+  position: absolute;
+  bottom: 0;
+  box-shadow: black 0 0 16px;
+}
+section [media][small] {
+  width: 128px;
+  height: 128px;
+}
+section[mediabg] [media] {
+  transition: filter 0.3s;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  transform: translate(-50%, 50%);
+  filter: blur(4px);
+}
+section[mediabg]:hover {
+  color: transparent;
+  filter: blur(0px);
+}
+section[mediabg]:not([noextend]):hover {
+  min-height: 256px;
+}
+section[mediabg]:hover [media] {
+  filter: blur(0px);
+}
+
+@media only screen and (max-device-width: 740px) {
+  #sections {
+    display: block;
+  }
+  section {
+    position: relative;
+    width: auto;
+  }
+  section:nth-child(2n+1) {
+    margin: 8px 64px 8px 0;
+  }
+  section:nth-child(2n+2) {
+    margin: 8px 0 8px 64px;
+  }
+}
+
+@media only screen and (max-device-width: 534px) {
+  [warning] {
+    left: 8px;
+    width: calc(100vw - 16px);
+  }
 }
