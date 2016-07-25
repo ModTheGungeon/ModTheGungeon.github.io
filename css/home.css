@@ -153,7 +153,7 @@
 }
 
 @media (max-width: 900px) {
-    #cover-inner {
+    #cover-logo {
         background-image: url("/img/logo.png");
         background-size: 436px 139px;
     }
@@ -162,7 +162,7 @@
     }
 }
 @media (max-width: 500px) {
-    #cover-inner {
+    #cover-logo {
         background-size: calc(436px * 0.5) calc(139px * 0.5);
     }
 }
