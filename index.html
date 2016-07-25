@@ -22,7 +22,7 @@
     <body>
     	
         <div id="cover-outer">
-        	<p id="pageversion" style="position: absolute; bottom: 0; right: 16px; opacity: 0.2;">V0</p>
+        	<p id="pageversion" style="position: absolute; bottom: 0; right: 16px; opacity: 0.2;">V1</p>
             <div id="cover-logo"></div>
 			<div id="cover-bullet">
 				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
@@ -43,8 +43,20 @@
 
         <div id="main">
 
-			<div id="sections">
-				<section mediabg noextend>
+        	<section id="maintext">
+				<h1>Welcome to Mod the Gungeon!</h1>
+				<p>Mod the Gungeon is an open-source modding ecosystem for "Enter the Gungeon". It consists of:</p>
+				<ul>
+					<li>ETGMod, the Base backend for mods</li>
+					<li>ETGMod.Installer, the backend installer</li>
+					<li>ExampleAPI &amp; ExampleMod, an example of a backend and a mod using that backend</li>
+					<li>InfKeysMod, a Base mod for infinite keys, can be used as an example of how to make mods for ETGMod.</li>
+				</ul>
+				<p>It not only is a mod loader, but also a mod itself. Look at all the features we've got right now!</p> 
+        	</section>
+
+			<div id="functions">
+				<div function mediabg noextend>
 					<h1>COMMAND LINE</h1>
 					<p>Set the screenshake! Give yourself items!</p>
 					<video media poster="//i.imgur.com/mrtVVOeh.jpg"
@@ -53,9 +65,9 @@
 						style="bottom: 0; transform: translate(-50%, 8px);">
 						<source src="//i.imgur.com/mrtVVOe.mp4" type="video/mp4">
 					</video>
-				</section>
+				</div>
 
-				<section mediabg>
+				<div function mediabg>
 					<h1>NINJA AND COSMONAUT</h1>
 					<p>Play as those who not only have no past, but also no future!*<br>
 					<sub>*: Manual compilation required.</sub></p>
@@ -64,28 +76,28 @@
 						loop="loop" webkit-playsinline>
 						<source src="//i.imgur.com/DXzvjqS.mp4" type="video/mp4">
 					</video>
-				</section>
+				</div>
 
-				<section mediabg>
+				<div function mediabg>
 					<h1>GOAT</h1>
 					<p>Gorem Meehpsum!</p>
 					<img media alt="" src="//i.imgur.com/gNRTGPx.gif">
-				</section>
-				<section mediabg>
+				</div>
+				<div function mediabg>
 					<h1>GOAT</h1>
 					<p>Gorem Meehpsum!</p>
 					<img media alt="" src="//i.imgur.com/JBj7yHj.gif">
-				</section>
-				<section mediabg>
+				</div>
+				<div function mediabg>
 					<h1>GOAT</h1>
 					<p>Gorem Meehpsum!</p>
 					<img media alt="" src="//i.imgur.com/2ed7QzB.gif">
-				</section>
-				<section mediabg>
+				</div>
+				<div function mediabg>
 					<h1>GOAT</h1>
 					<p>Gorem Meehpsum!</p>
 					<img media alt="" src="//i.imgur.com/y6srtzU.gif">
-				</section>
+				</div>
             </div>
 
         </div>

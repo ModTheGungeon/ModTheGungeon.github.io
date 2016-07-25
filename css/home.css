@@ -167,7 +167,14 @@
 #main {
   margin-top: 100vh;
   background: #b8a34f;
-  padding: 8px 0;
+  padding: 0 0;
+}
+
+#maintext {
+  display: block;
+  margin: 0;
+  background: #4f99b8;
+  padding: 16px;
 }
 
 @media only screen and (max-device-width: 900px) {

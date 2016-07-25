@@ -11,10 +11,6 @@ body {
   z-index: 1;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 h1 {
   font-weight: 300;
 }
@@ -23,14 +19,42 @@ video {
   background: black;
 }
 
-#sections {
+ul {
+  list-style: none;
+  padding-left: initial;
+}
+li {
+  position: relative;
+  padding: 4px;
+  padding-left: 24px;
+}
+li:nth-child(2n+1) {
+  background: rgba(0, 0, 0, 0.2);
+}
+li:nth-child(2n+2) {
+  background: rgba(255, 225, 255, 0.2);
+}
+li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid white;
+}
+
+#functions {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
 }
-section, [warning] {
+[function], [warning] {
   transition: color 0.3s, min-height 0.3s;
   position: relative;
   display: block;
@@ -51,34 +75,34 @@ section, [warning] {
   width: 512px;
   background: #fb0d3d;
 }
-section {
+[function] {
   margin: 8px;
 }
-section:hover {
+[function]:hover {
   z-index: 60;
 }
-section:nth-child(2n+1) {
+[function]:nth-child(2n+1) {
   background: #b84f64;
 }
-section:nth-child(2n+2) {
+[function]:nth-child(2n+2) {
   background: #4fb8a3;
 }
-section:nth-child(2n+3) {
+[function]:nth-child(2n+3) {
   background: #4f64b8;
 }
-section[mediabg] {
+[function][mediabg] {
   background: black;
 }
 
-section [media] {
+[function] [media] {
   position: absolute;
   bottom: 0;
 }
-section [media][small] {
+[function] [media][small] {
   width: 128px;
   height: 128px;
 }
-section[mediabg] [media] {
+[function][mediabg] [media] {
   transition: filter 0.3s;
   display: block;
   position: absolute;
@@ -89,29 +113,29 @@ section[mediabg] [media] {
   transform: translate(-50%, 50%);
   filter: blur(4px);
 }
-section[mediabg]:hover {
+[function][mediabg]:hover {
   color: transparent;
   filter: blur(0px);
 }
-section[mediabg]:not([noextend]):hover {
+[function][mediabg]:not([noextend]):hover {
   min-height: 256px;
 }
-section[mediabg]:hover [media] {
+[function][mediabg]:hover [media] {
   filter: blur(0px);
 }
 
 @media only screen and (max-device-width: 740px) {
-  #sections {
+  #functions {
     display: block;
   }
-  section {
+  [function] {
     position: relative;
     width: auto;
   }
-  section:nth-child(2n+1) {
+  [function]:nth-child(2n+1) {
     margin: 8px 64px 8px 0;
   }
-  section:nth-child(2n+2) {
+  [function]:nth-child(2n+2) {
     margin: 8px 0 8px 64px;
   }
 }
