@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Roboto";
   font-weight: 200;
-  background: #b8a34f;
+  background: #222222;
   color: rgba(255, 255, 255, 0.87);
 }
 #main {
@@ -11,6 +11,7 @@ body {
   padding: 8px;
   z-index: 1;
   overflow: hidden;
+  min-height: calc(100vh + 512px);
 }
 
 * {
@@ -83,7 +84,7 @@ a:hover, a:active {
   display: block;
   position: fixed;
   z-index: 100;
-  background: #402b68;
+  background: #d8ceeb;
 
   left: 0;
   top: 0;
@@ -291,6 +292,9 @@ a:hover, a:active {
     top: 36px;
   }
 
+  #main>header {
+    background: #402b68;
+  }
   nav {
     transition: transform 0.3s;
     position: absolute;
