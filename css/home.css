@@ -170,7 +170,7 @@
   padding: 0 0;
 }
 
-#maintext {
+.maintext {
   display: block;
   margin: 0;
   background: #4f99b8;
