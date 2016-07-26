@@ -243,6 +243,9 @@ a:hover, a:active {
 }
 
 @media only screen and (max-device-width: 900px) {
+  #main {
+    padding-top: 64px;
+  }
   #main>header {
     left: 0;
     top: 0;

@@ -144,6 +144,7 @@
   border-radius: 64px;
   z-index: 1;
   background: black;
+  cursor: pointer;
 }
 #cover-down:before, #cover-down:after {
   content: "";
@@ -168,6 +169,7 @@
   margin-top: 100vh;
   background: #222222;
   padding: 0 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 -8px 32px;
 }
 
 .maintext {
@@ -237,4 +239,10 @@
   90%  {transform: translateX(-3px);}
   96%  {transform: translateX(1px);}
   100% {transform: translateX(2px);}
+}
+
+@media only screen and (max-device-width: 900px) {
+  .maintext:nth-child(1) {
+    padding-top: 64px;
+  }
 }
