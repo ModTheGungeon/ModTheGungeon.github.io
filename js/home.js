@@ -1,24 +1,23 @@
+var main = document.getElementById("main");
+var mainY;
+var updateMainY = function() {
+    mainY = main.offsetTop;
+};
+updateMainY();
+
 var coverDown = document.getElementById("cover-down");
 coverDown.outerHTML = "<div id=\"cover-down\"></div>";
 coverDown = document.getElementById("cover-down");
 
 (function() {
     var scrollOvershoot = 64;
-    var scrollTo;
-    var scrollToOvershoot;
     var scrolling = false;
-
-    var updateScrollTo = function() {
-        scrollTo = document.getElementById("main").offsetTop;
-        scrollToOvershoot = scrollTo + scrollOvershoot;
-    };
-    updateScrollTo();
 
     var lastFrame = new Date().getTime();
     var scrollFrame = function() {
-        var currentScroll = window.scrollY;
-        if (0 <= currentScroll - scrollTo) {
-            window.scrollTo(0, scrollTo);
+        var scrollY = window.scrollY;
+        if (0 <= scrollY - mainY) {
+            window.scrollTo(0, mainY);
             scrolling = false;
             return;
         }
@@ -27,7 +26,7 @@ coverDown = document.getElementById("cover-down");
         var dt = (currentFrame - lastFrame) / 1000;
         lastFrame = currentFrame;
 
-        window.scrollTo(0, currentScroll + (scrollToOvershoot - currentScroll) * 4 * dt);
+        window.scrollTo(0, scrollY + ((mainY + scrollOvershoot) - scrollY) * 4 * dt);
 
         setTimeout(scrollFrame, 0);
     };
@@ -41,6 +40,26 @@ coverDown = document.getElementById("cover-down");
         lastFrame = new Date().getTime();
         scrollFrame();
     });
-
-    window.addEventListener("resize", updateScrollTo);
 })();
+
+var header = document.getElementsByTagName("header")[0];
+header.style.position = "absolute";
+
+var _updateHeaderPos = true;
+var updateHeaderPos = function() {
+    var scrollY = window.scrollY;
+    if (0 <= scrollY - mainY) {
+        if (!_updateHeaderPos) {
+            _updateHeaderPos = true;
+            header.style.position = "fixed";
+        }
+    } else if (_updateHeaderPos) {
+        _updateHeaderPos = false;
+        header.style.position = "absolute";
+    }
+};
+updateHeaderPos();
+
+window.addEventListener("scroll", updateHeaderPos);
+
+window.addEventListener("resize", updateMainY);

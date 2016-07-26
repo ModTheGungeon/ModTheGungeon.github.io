@@ -10,7 +10,6 @@ body {
   display: block;
   padding: 8px;
   z-index: 1;
-  overflow: hidden;
   min-height: calc(100vh + 512px);
 }
 
@@ -80,7 +79,7 @@ a:hover, a:active {
   opacity: 0;
 }
 
-#main>header {
+header {
   display: block;
   position: fixed;
   z-index: 100;
@@ -92,16 +91,16 @@ a:hover, a:active {
   height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.4) 2px 0 8px;
 }
-#main>header #logo, #main>header #navlogo, #main>header a {
+header #logo, header #navlogo, header a {
   display: block;
   width: 256px;
   padding: 8px;
   margin-bottom: 2px;
 }
-#main>header #navlogo {
+header #navlogo {
   display: none;
 }
-#main>header a {
+header a {
   transition: width 0.3s, background 0.3s, box-shadow 0.3s;
   width: calc(256px + 4px);
   background: white;
@@ -112,7 +111,7 @@ a:hover, a:active {
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0 -2px 0 inset, rgba(0, 0, 0, 0.4) 0 2px 4px;
 }
-#main>header a:hover {
+header a:hover {
   width: calc(256px + 16px);
   padding: 16px;
   background: #f3f9fc;
@@ -242,11 +241,11 @@ a:hover, a:active {
   filter: blur(0px);
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 1100px) {
   #main {
     padding-top: 64px;
   }
-  #main>header {
+  header {
     left: 0;
     top: 0;
     width: 100vw;
@@ -256,13 +255,13 @@ a:hover, a:active {
   #main>#main-content {
     margin-left: 0;
   }
-  #main>header #logo {
+  header #logo {
     width: initial;
     height: 64px;
     padding: 8px;
     padding-left: 64px;
   }
-  #main>header #navlogo {
+  header #navlogo {
     display: block;
     position: relative;
     z-index: 102;
@@ -295,7 +294,7 @@ a:hover, a:active {
     top: 36px;
   }
 
-  #main>header {
+  header {
     background: #402b68;
   }
   nav {
@@ -323,13 +322,15 @@ a:hover, a:active {
     opacity: 1;
     pointer-events: auto;
   }
+}
 
+@media only screen and (max-width: 900px) {
   [function] {
     width: calc(50vw - 16px);
   }
 }
 
-@media only screen and (max-device-width: 740px) {
+@media only screen and (max-width: 740px) {
   #functions {
     display: block;
   }
@@ -346,7 +347,7 @@ a:hover, a:active {
   }
 }
 
-@media only screen and (max-device-width: 534px) {
+@media only screen and (max-width: 534px) {
   [function],[warning] {
     min-width: 0px;
     min-height: 192px;
@@ -356,9 +357,9 @@ a:hover, a:active {
     width: 100vw;
   }
 }
-@media only screen and (max-device-height: 600px) {
+@media only screen and (max-height: 800px) {
   [warning] {
-    bottom: 100vh;
+    bottom: calc(100vh - 64px);
     transform: translateY(100%);
   }
 }
