@@ -122,7 +122,7 @@
   background: #402b68;
   margin: 0;
   top: 0;
-  left: 0;
+  left: 128px;
   width: 100vw;
   height: 100vh;
   image-rendering:optimizeSpeed;             /* Legal fallback */
@@ -179,7 +179,7 @@
   padding: 16px;
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 1000px) {
   #cover-logo {
     background-image: url("/img/logo.png");
     background-size: 436px 139px;
@@ -188,13 +188,13 @@
     display: none;
   }
 }
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 500px) {
   #cover-logo {
     background-size: calc(436px * 0.5) calc(139px * 0.5);
   }
 }
 
-@media only screen and (max-device-width: 1100px) {
+@media only screen and (max-width: 1100px) {
   .maintext:nth-child(1) {
     padding-top: 64px;
   }

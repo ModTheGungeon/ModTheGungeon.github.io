@@ -1,9 +1,4 @@
-var main = document.getElementById("main");
-var mainY;
-var updateMainY = function() {
-    mainY = main.offsetTop;
-};
-updateMainY();
+document.getElementById("cover-outer").style.left = "0px";
 
 var coverDown = document.getElementById("cover-down");
 coverDown.outerHTML = "<div id=\"cover-down\"></div>";
@@ -59,7 +54,4 @@ var updateHeaderPos = function() {
     }
 };
 updateHeaderPos();
-
 window.addEventListener("scroll", updateHeaderPos);
-
-window.addEventListener("resize", updateMainY);
