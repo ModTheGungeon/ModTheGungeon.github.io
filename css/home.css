@@ -136,6 +136,7 @@
   z-index: -1;
 }
 #cover-down {
+  transition: transform 0.3s, box-shadow 0.3s;
   position: absolute;
   bottom: 32px;
   left: calc(50vw - 32px);
@@ -143,8 +144,15 @@
   height: 64px;
   border-radius: 64px;
   z-index: 1;
-  background: black;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 6px 12px;
+  transform: translateY(-4px);
+}
+#cover-down:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 8px;
+  transform: translateY(0px);
 }
 #cover-down:before, #cover-down:after {
   content: "";
@@ -172,11 +180,70 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0 -8px 32px;
 }
 
-.maintext {
+section, .maintext {
   display: block;
   margin: 0;
   background: #4f99b8;
   padding: 16px;
+}
+#download {
+  background: #4fb8a3;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+section .buttons {
+  display: block;
+  margin-top: 32px;
+  border-radius: 3px;
+  background: #222222;
+  padding: 16px;
+  margin-bottom: 32px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 32px inset,
+              rgba(0, 0, 0, 0.5) 0 4px 16px inset;
+}
+section .buttons a {
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  background: #2e5e73;
+  color: white;
+  text-shadow: none;
+  text-decoration: none;
+  padding: 8px;
+  margin: 2px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 8px;
+  transform: translateY(0px);
+}
+section .buttons a:hover {
+  background: #448ba9;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 4px 16px;
+  transform: translateY(-2px);
+}
+
+#download>div {
+  width: 500px;
+}
+#download>[left] {
+  margin-right: 32px;
+}
+#oses {
+  position: relative;
+  height: 64px;
+  padding-left: 64px;
+}
+#oses p:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#oses img {
+  height: 64px;
+  margin: 8px;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -10,7 +10,7 @@ body {
   display: block;
   padding: 8px;
   z-index: 1;
-  min-height: calc(100vh + 512px);
+  min-height: 100vh;
 }
 
 * {
@@ -359,7 +359,12 @@ header a:hover {
 }
 @media only screen and (max-height: 800px) {
   [warning] {
-    bottom: calc(100vh - 64px);
+    bottom: calc(100vh);
     transform: translateY(100%);
+  }
+}
+@media only screen and (max-width: 1100px) and (max-height: 800px) {
+  [warning] {
+    bottom: calc(100vh - 64px);
   }
 }

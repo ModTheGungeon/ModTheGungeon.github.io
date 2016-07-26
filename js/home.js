@@ -40,18 +40,41 @@ coverDown = document.getElementById("cover-down");
 var header = document.getElementsByTagName("header")[0];
 header.style.position = "absolute";
 
-var _updateHeaderPos = true;
+var _updateHeaderPos = 0;
 var updateHeaderPos = function() {
     var scrollY = window.scrollY;
     if (0 <= scrollY - mainY) {
-        if (!_updateHeaderPos) {
-            _updateHeaderPos = true;
+        if (_updateHeaderPos != 1) {
+            _updateHeaderPos = 1;
             header.style.position = "fixed";
         }
-    } else if (_updateHeaderPos) {
-        _updateHeaderPos = false;
+    } else if (_updateHeaderPos != 2) {
+        _updateHeaderPos = 2;
         header.style.position = "absolute";
     }
 };
 updateHeaderPos();
 window.addEventListener("scroll", updateHeaderPos);
+
+var downloads = document.getElementById("downloads");
+jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer/releases?callback=", {
+    onSuccess: function(json) {
+        var all = downloads.children[0];
+        downloads.removeChild(all);
+        for (var i = 0; i < json.data.length; i++) {
+            var data = json.data[i];
+            var tag = data.tag_name;
+            var asset = data.assets[0];
+            var url = asset.browser_download_url;
+            var count = asset.download_count;
+            
+            var elem = document.createElement("a");
+            elem.href = url;
+            elem.text = tag + " (" + count + ")";
+            downloads.appendChild(elem);
+        }
+        downloads.appendChild(all);
+    },
+    onTimeout: function(){
+    },
+});
