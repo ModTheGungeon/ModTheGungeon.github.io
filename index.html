@@ -23,7 +23,7 @@
     	
         <div id="cover-outer">
         	<p id="pageversion" style="position: absolute; bottom: 0; right: 16px; opacity: 0.2;">
-        	V2</p>
+        	V3</p>
             <div id="cover-logo"></div>
 			<div id="cover-bullet">
 				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
@@ -44,61 +44,96 @@
 
         <div id="main">
 
-        	<section class="maintext">
-				<h1>Welcome to Mod the Gungeon!</h1>
-				<p>Mod the Gungeon is an open-source modding ecosystem for "Enter the Gungeon". It consists of:</p>
-				<ul>
-					<li>ETGMod, the Base backend for mods</li>
-					<li>ETGMod.Installer, the backend installer</li>
-					<li>ExampleAPI &amp; ExampleMod, an example of a backend and a mod using that backend</li>
-					<li>InfKeysMod, a Base mod for infinite keys, can be used as an example of how to make mods for ETGMod.</li>
-				</ul>
-				<p>It not only is a mod loader, but also a mod itself. Look at all the features we've got right now!</p> 
-        	</section>
+			<header>
+				<img id="logo" alt="" src="/img/logo.png">
+				<div id="navbutton">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<nav>
+					<img id="navlogo" alt="" src="/img/logo.png">
+					<a href="/">HOME</a>
+					<a href="/tutorials">TUTORIALS</a>
+				</nav>
+				<div id="navdark" class="dark"></div>
+        	</header>
 
-			<div id="functions">
-				<div function mediabg noextend>
-					<h1>COMMAND LINE</h1>
-					<p>Set the screenshake! Give yourself items!</p>
-					<video media poster="//i.imgur.com/mrtVVOeh.jpg"
-						preload="auto" autoplay="autoplay" muted="muted"
-						loop="loop" webkit-playsinline
-						style="bottom: 0; transform: translate(-50%, 8px);">
-						<source src="//i.imgur.com/mrtVVOe.mp4" type="video/mp4">
-					</video>
+        	<div id="main-content">
+
+				<section class="maintext">
+					<h1>Welcome to Mod the Gungeon!</h1>
+					<p>Mod the Gungeon is an open-source modding ecosystem for "Enter the Gungeon". It consists of:</p>
+					<ul>
+						<li>ETGMod, the Base backend for mods</li>
+						<li>ETGMod.Installer, the backend installer</li>
+						<li>ExampleAPI &amp; ExampleMod, an example of a backend and a mod using that backend</li>
+						<li>InfKeysMod, a Base mod for infinite keys, can be used as an example of how to make mods for ETGMod.</li>
+					</ul>
+					<p>It not only is a mod loader, but also a mod itself. Look at all the features we've got right now!</p> 
+				</section>
+
+				<div id="functions">
+					<div function mediabg noextend>
+						<div fg>
+							<h1>COMMAND LINE</h1>
+							<p>Set the screenshake! Give yourself items!</p>
+						</div>
+						<video media poster="//i.imgur.com/mrtVVOeh.jpg"
+							preload="auto" autoplay="autoplay" muted="muted"
+							loop="loop" webkit-playsinline
+							style="bottom: 0; transform: translate(-25%, 8px); width: 200%;">
+							<source src="//i.imgur.com/mrtVVOe.mp4" type="video/mp4">
+						</video>
+					</div>
+
+					<div function mediabg>
+						<div fg>
+							<h1>NINJA AND COSMONAUT</h1>
+							<p>Play as those who not only have no past, but also no future!*</p>
+							<sub>*: Manual compilation required.</sub>
+						</div>
+						<video media poster="//i.imgur.com/DXzvjqSh.jpg"
+							preload="auto" autoplay="autoplay" muted="muted"
+							loop="loop" webkit-playsinline>
+							<source src="//i.imgur.com/DXzvjqS.mp4" type="video/mp4">
+						</video>
+					</div>
+
+					<div function mediabg>
+						<div fg>
+							<h1>GOAT</h1>
+							<p>Gorem Meehpsum!</p>
+							<sub>Goats for debugging purposes.</sub>
+						</div>
+						<img media alt="" src="//i.imgur.com/gNRTGPx.gif">
+					</div>
+					<div function mediabg>
+						<div fg>
+							<h1>GOAT</h1>
+							<p>Gorem Meehpsum!</p>
+							<sub>Goats for debugging purposes.</sub>
+						</div>
+						<img media alt="" src="//i.imgur.com/JBj7yHj.gif">
+					</div>
+					<div function mediabg>
+						<div fg>
+							<h1>GOAT</h1>
+							<p>Gorem Meehpsum!</p>
+							<sub>Goats for debugging purposes.</sub>
+						</div>
+						<img media alt="" src="//i.imgur.com/2ed7QzB.gif">
+					</div>
+					<div function mediabg>
+						<div fg>
+							<h1>GOAT</h1>
+							<p>Gorem Meehpsum!</p>
+							<sub>Goats for debugging purposes.</sub>
+						</div>
+						<img media alt="" src="//i.imgur.com/y6srtzU.gif">
+					</div>
 				</div>
 
-				<div function mediabg>
-					<h1>NINJA AND COSMONAUT</h1>
-					<p>Play as those who not only have no past, but also no future!*<br>
-					<sub>*: Manual compilation required.</sub></p>
-					<video media poster="//i.imgur.com/DXzvjqSh.jpg"
-						preload="auto" autoplay="autoplay" muted="muted"
-						loop="loop" webkit-playsinline>
-						<source src="//i.imgur.com/DXzvjqS.mp4" type="video/mp4">
-					</video>
-				</div>
-
-				<div function mediabg>
-					<h1>GOAT</h1>
-					<p>Gorem Meehpsum!</p>
-					<img media alt="" src="//i.imgur.com/gNRTGPx.gif">
-				</div>
-				<div function mediabg>
-					<h1>GOAT</h1>
-					<p>Gorem Meehpsum!</p>
-					<img media alt="" src="//i.imgur.com/JBj7yHj.gif">
-				</div>
-				<div function mediabg>
-					<h1>GOAT</h1>
-					<p>Gorem Meehpsum!</p>
-					<img media alt="" src="//i.imgur.com/2ed7QzB.gif">
-				</div>
-				<div function mediabg>
-					<h1>GOAT</h1>
-					<p>Gorem Meehpsum!</p>
-					<img media alt="" src="//i.imgur.com/y6srtzU.gif">
-				</div>
             </div>
 
         </div>
