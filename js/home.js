@@ -42,8 +42,7 @@ var header = document.getElementsByTagName("header")[0];
 header.style.position = "absolute";
 
 var _updateHeaderPos = 0;
-var updateHeaderPos = function() {
-    var scrollY = window.scrollY;
+var updateHeaderPos = function(scrollY) {
     if (0 <= scrollY - mainY) {
         if (_updateHeaderPos != 1) {
             _updateHeaderPos = 1;
@@ -54,8 +53,8 @@ var updateHeaderPos = function() {
         header.style.position = "absolute";
     }
 };
-updateHeaderPos();
-window.addEventListener("scroll", updateHeaderPos);
+updateHeaderPos(0);
+window.addEventListener("scroll", function() {updateHeaderPos(window.scrollY);});
 
 var downloads = document.getElementById("downloads");
 var downloadNewest;

@@ -40,4 +40,5 @@ var updateMainY = function() {
     mainY = main.offsetTop;
 };
 updateMainY();
+setTimeout(updateMainY, 200);
 window.addEventListener("resize", updateMainY);
