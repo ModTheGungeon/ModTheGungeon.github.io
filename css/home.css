@@ -314,6 +314,10 @@
   position: relative;
   height: 64px;
   padding-left: 64px;
+  font-size: 12px;
+}
+#oses p {
+  font-size: 16px;
 }
 #oses p:nth-child(1) {
   position: absolute;
