@@ -407,6 +407,9 @@ a.de4dot {
 }
 
 @media only screen and (max-width: 1100px) {
+  #cover-outer {
+    left: 0;
+  }
   #main-content #intro:nth-child(1) {
     padding-top: 64px;
   }
@@ -447,7 +450,7 @@ a.de4dot {
 }
 @media only screen and (max-height: 800px) {
   [warning] {
-    bottom: calc(100vh);
+    bottom: calc(100vh - 64px);
     transform: translateY(100%);
   }
 }
