@@ -57,6 +57,7 @@ updateHeaderPos();
 window.addEventListener("scroll", updateHeaderPos);
 
 var downloads = document.getElementById("downloads");
+var downloadNewest;
 jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer/releases?callback=", {
     onSuccess: function(json) {
         var all = downloads.children[0];
@@ -68,10 +69,22 @@ jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer/releases?callback="
             var url = asset.browser_download_url;
             var count = asset.download_count;
             
-            var elem = document.createElement("a");
-            elem.href = url;
-            elem.text = tag + " (" + count + ")";
-            downloads.appendChild(elem);
+            var elemDownload = document.createElement("a");
+            elemDownload.href = url;
+            elemDownload.textContent = tag;
+            var elemCount = document.createElement("span");
+            elemCount.className = "minor";
+            elemCount.textContent = "(" + count + ")";
+            elemDownload.appendChild(elemCount);
+            if (i == 0) {
+                downloadNewest = elemDownload;
+                elemDownload.setAttribute("newest", true);
+                var elemIcon = document.createElement("i");
+                elemIcon.className = "material-icons";
+                elemIcon.textContent = "file_download";
+                elemDownload.insertBefore(elemIcon, elemDownload.firstChild);
+            }
+            downloads.appendChild(elemDownload);
         }
         downloads.appendChild(all);
     },

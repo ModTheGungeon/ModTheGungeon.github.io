@@ -7,7 +7,8 @@
         <link rel="icon" sizes="192x192" href="/favicon-192.png">
         <link rel="icon" sizes="512x512" href="/favicon-512.png">
         <link rel="shortcut icon" type="image/png" href="/favicon.png">
-        <link href="//fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400" rel="stylesheet">
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/home.css">
         <script type="text/javascript" src="/js/main.js" async defer></script>
@@ -25,7 +26,7 @@
     	
         <div id="cover-outer">
         	<p id="pageversion" style="position: absolute; bottom: 0; right: 16px; opacity: 0.2;">
-        	V7</p>
+        	V8</p>
             <div id="cover-logo"></div>
 			<div id="cover-bullet">
 				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
@@ -46,24 +47,31 @@
 
         <div id="main">
 
-			<header>
-				<img id="logo" alt="" src="/img/logo.png">
-				<div id="navbutton">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-				<nav>
-					<img id="navlogo" alt="" src="/img/logo.png">
-					<a href="/">HOME</a>
-					<a href="/tutorials">TUTORIALS</a>
-				</nav>
-				<div id="navdark" class="dark"></div>
-			</header>
+<header>
+	<img id="logo" alt="" src="/img/logo.png">
+	<div id="navbutton">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<nav>
+		<img id="navlogo" alt="" src="/img/logo.png">
+		<a href="/">HOME</a>
+		<section>
+			<a href="#intro">INTRO</a>
+			<a href="#features">FEATURES</a>
+			<a href="#download">DOWNLOAD</a>
+			<a href="#code">CODE</a>
+			<a href="#feedback">TASKS & FEEDBACK</a>
+		</section>
+		<a href="/tutorials">TUTORIALS</a>
+	</nav>
+	<div id="navdark" class="dark"></div>
+</header>
 
         	<div id="main-content">
 
-				<section class="maintext">
+				<section id="intro">
 					<h1>Welcome to Mod the Gungeon!</h1>
 					<p>Mod the Gungeon is an open-source modding ecosystem for "Enter the Gungeon". It consists of:</p>
 					<ul>
@@ -75,7 +83,7 @@
 					<p>It not only is a mod loader, but also a mod itself. Look at all the features we've got right now!</p> 
 				</section>
 
-				<section id="functions">
+				<section id="features">
 <div function mediabg noextend>
 	<div fg>
 		<h1>COMMAND LINE</h1>
@@ -104,27 +112,55 @@
 
 				</section>
 
-				<section id="download">
-					<div left>
-						<h1>Download ETGMod.Installer</h1>
-						<p>The Mod the Gungeon installer is how you install and update ETGMod.
-						Either select the EtG.exe or - if you've got Steam - let the installer find it for you.
-						Then select the backends and hit the install button!
-						If you ever want to uninstall, just hit the red X next to the install button.</p>
-						<sub>*: USE MONO, NOT WINE!</sub>
-						<div class="buttons" id="downloads">
-							<a href="https://github.com/ModTheGungeon/ETGMod.Installer/releases">ALL RELEASES</a>
-						</div>
-					</div>
-					<div right>
-						<img id="installer_screen" alt="" src="/img/installer_win.png">
-						<div id="oses">
-							<p>Runs on:</p>
-							<img alt="" src="/img/os_win.png">
-							<img alt="" src="/img/os_mac.png">*
-							<img alt="" src="/img/os_lin.png">*
-						</div>
-					</div>
+				<section id="download" class="flex">
+<div left>
+	<h1>Download ETGMod.Installer</h1>
+	<p>The Mod the Gungeon installer is how you install and update ETGMod.
+	Either select the EtG.exe or - if you've got Steam - let the installer find it for you.
+	Then select the backends and hit the install button!
+	If you ever want to uninstall, just hit the red X next to the install button.</p>
+	<sub>*: USE MONO, NOT WINE!</sub>
+	<div class="buttons" id="downloads">
+		<a href="https://github.com/ModTheGungeon/ETGMod.Installer/releases">ALL RELEASES</a>
+	</div>
+</div>
+<div right>
+	<img id="installer_screen" alt="" src="/img/installer_win.png">
+	<div id="oses">
+		<p>Runs on:</p>
+		<img alt="" src="/img/os_win.png">
+		<img alt="" src="/img/os_mac.png">*
+		<img alt="" src="/img/os_lin.png">*
+	</div>
+</div>
+				</section>
+
+				<section id="code" class="flex">
+<div left>
+	<div id="codeimg"></div>
+</div>
+<div right>
+	<h1>Open-Source on GitHub</h1>
+	<p>Mod the Gungeon is an open-source project, by the community, for the community.
+	Take a look at the source on GitHub, throw issues in our direction or even fork and send pull requests!
+	Under the hood, the installer uses MonoMod, which is powered by Mono.Cecil. Both are also open-source!</p>
+	<sub>Generally licensed under the MIT license. de4dot, packed as binary blob extension in the installer, is licensed under the GPLv3.</sub>
+	<br>
+	<a class="button huge" href="https://github.com/ModTheGungeon/">MOD THE GUNGEON ON <img alt="GITHUB" src="/img/icon_github.png"></img></a>
+</div>
+				</section>
+
+				<section id="feedback" class="flex">
+<div left>
+	<h1>Tasks and feedback on Trello</h1>
+	<p>Mod the Gungeon uses Trello to coordinate which tasks to work on.
+	Votes and comments are open for anyone having a Trello account and the discussion section contains cards to comment on with feedback or feature wishes.</p>
+	<br>
+	<a class="button huge" href="https://trello.com/b/aCclwfZH/mod-the-gungeon">MOD THE GUNGEON ON TRELLO</a>
+</div>
+<div right>
+	<img id="trelloimg" alt="" src="/img/trello.png">
+</div>
 				</section>
 
             </div>

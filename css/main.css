@@ -101,7 +101,7 @@ header #navlogo {
   display: none;
 }
 header a {
-  transition: width 0.3s, background 0.3s, box-shadow 0.3s;
+  transition: width 0.3s, background 0.3s, box-shadow 0.3s, text-shadow 0.3s;
   width: calc(256px + 4px);
   background: white;
   display: block;
@@ -113,9 +113,20 @@ header a {
 }
 header a:hover {
   width: calc(256px + 16px);
-  padding: 16px;
   background: #f3f9fc;
   box-shadow: rgba(60, 161, 204, 0.4) 0 -2px 0 inset, rgba(0, 0, 0, 0.4) 0 2px 8px;
+}
+header section {
+  width: calc(100% + 32px);
+  overflow-y: hidden;
+}
+header section a {
+  padding: 8px 16px;
+  width: calc(256px - 8px);
+  margin-left: 12px;
+}
+header section a:hover {
+  width: calc(256px + 4px);
 }
 
 #main>#main-content {
@@ -125,120 +136,74 @@ header a:hover {
   margin-left: 256px;
 }
 
-#functions {
+#main-content section.flex, section.flex {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
   align-content: flex-start;
-  background: #222222;
-}
-[function], [warning] {
-  transition: color 0.3s, min-height 0.3s;
-  position: relative;
-  display: block;
-  padding: 4px 16px;
-  border-radius: 3px;
-  width: calc(33vw - 16px);
-  min-height: 256px;
   overflow: hidden;
-  z-index: 50;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 0 32px inset,
-              rgba(0, 0, 0, 0.5) 0 4px 16px inset;
 }
-[warning] {
-  position: absolute;
-  bottom: 128px;
-  left: calc(50% - 256px);
-  width: 512px;
-  min-height: 0px;
-  background: #fb0d3d;
+section.flex>div {
+  position: relative;
+  width: 500px;
 }
-[function] {
-  margin: 8px;
+section.flex>[left] {
+  margin-right: 32px;
 }
-[function]:hover {
-  z-index: 60;
-}
-[function]:nth-child(2n+1) {
-  background: #b84f64;
-}
-[function]:nth-child(2n+2) {
-  background: #4fb8a3;
-}
-[function]:nth-child(2n+3) {
-  background: #4f64b8;
-}
-[function][mediabg] {
-  background: black;
-  box-shadow: none;
-  padding: 0;
-}
-[function][mediabg] [fg] {
+
+.buttons {
   display: block;
-  position: absolute;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  padding: 4px 16px;
+  margin-top: 32px;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 0 32px inset,
-              rgba(0, 0, 0, 0.5) 0 4px 16px inset;
+  background: #222222;
+  padding: 16px;
+  margin-bottom: 32px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 8px inset,
+              rgba(0, 0, 0, 0.5) 0 2px 4px inset;
 }
-[shim], [function][mediabg] [fg] {
-  transition: background 0.3s;
-  background: rgba(0, 0, 0, 0.25);
+.buttons a, a.button {
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  background: #2e5e73;
+  color: white;
+  text-shadow: none;
+  text-decoration: none;
+  padding: 8px;
+  margin: 2px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 8px;
+  transform: translateY(0px);
 }
-[shim], [function][mediabg]:hover [fg] {
-  background: transparent;
+.buttons a.huge, a.button.huge {
+  padding: 12px;
 }
-
-[function] [media] {
-  position: absolute;
-  bottom: 0;
+a.button {
+  margin-top: 16px;
 }
-[function] [media][small] {
-  width: 128px;
-  height: 128px;
+.buttons a:hover, a.button:hover {
+  background: #448ba9;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 4px 16px;
+  transform: translateY(-2px);
 }
-[function][mediabg] [media] {
-  transition: filter 0.3s;
-  display: block;
-  position: absolute;
-  z-index: -1;
-  bottom: 50%;
-  left: 50%;
-  width: calc(100% + 8px);
-  transform: translate(-50%, 50%);
-  filter: blur(4px);
+.buttons a .minor, a.button .minor {
+  display: inline-block;
+  opacity: 0.4;
+  font-size: 12px;
+  margin-left: 4px;
+  transform: translateY(-1px);
 }
-[function][mediabg]:hover {
-  color: transparent;
-  filter: blur(0px);
+.buttons a i, a.button i {
+  line-height: 0;
+  transform: translateY(8px);
 }
-[function][mediabg]:not([noextend]):hover {
-  min-height: 256px;
-}
-[function][mediabg]:hover [media] {
-  filter: blur(0px);
-}
-
-[function] sub {
-  transition: opacity 0.3s, background 0.3s, color 0.3s, filter 0.3s;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 8px 16px;
-  opacity: 0.1;
-  background: rgba(0, 0, 0, 1);
-  filter: blur(1px);
-}
-[function]:hover sub {
-  color: rgba(255, 255, 255, 0.87);
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.75);
-  filter: blur(0px);
+.buttons a img, a.button img {
+  display: inline;
+  height: 24px;
+  margin-left: 2px;
+  margin-top: -100%;
+  margin-bottom: -4px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -307,6 +272,7 @@ header a:hover {
     height: 100vh;
     transform: translateX(-260px);
     background: #d8ceeb;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 0 8px;
   }
   #navbutton:hover~nav, nav:hover {
     transform: translateX(0);
@@ -321,50 +287,5 @@ header a:hover {
   #navbutton:hover~#navdark, nav:hover~#navdark {
     opacity: 1;
     pointer-events: auto;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  [function] {
-    width: calc(50vw - 16px);
-  }
-}
-
-@media only screen and (max-width: 740px) {
-  #functions {
-    display: block;
-  }
-  [function] {
-    position: relative;
-    width: auto;
-    min-height: 128px;
-  }
-  [function]:nth-child(2n+1) {
-    margin: 8px 64px 8px 0;
-  }
-  [function]:nth-child(2n+2) {
-    margin: 8px 0 8px 64px;
-  }
-}
-
-@media only screen and (max-width: 534px) {
-  [function],[warning] {
-    min-width: 0px;
-    min-height: 192px;
-  }
-  [warning] {
-    left: 0;
-    width: 100vw;
-  }
-}
-@media only screen and (max-height: 800px) {
-  [warning] {
-    bottom: calc(100vh);
-    transform: translateY(100%);
-  }
-}
-@media only screen and (max-width: 1100px) and (max-height: 800px) {
-  [warning] {
-    bottom: calc(100vh - 64px);
   }
 }
