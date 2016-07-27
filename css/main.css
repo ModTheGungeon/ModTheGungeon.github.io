@@ -134,6 +134,7 @@ header section a:hover {
   position: relative;
 
   margin-left: 256px;
+  padding-left: 8px;
 }
 
 #main-content section.flex, section.flex {

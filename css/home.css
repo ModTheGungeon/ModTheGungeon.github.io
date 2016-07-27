@@ -180,6 +180,10 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0 -8px 32px;
 }
 
+#main>#main-content {
+  padding-left: 0px;
+}
+
 #main-content section, #intro {
   display: block;
   margin: 0;
@@ -371,6 +375,10 @@
 }
 #code>[right]>sub {
   margin-bottom: 32px;
+}
+a.de4dot {
+  color: rgba(255, 255, 255, 0.87);
+  text-shadow: none;
 }
 
 #feedback {
