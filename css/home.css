@@ -411,7 +411,7 @@ a.de4dot {
     left: 0;
   }
   #pageversion {
-    right:  16px;
+    right: 16px !important;
   }
   #main-content #intro:nth-child(1) {
     padding-top: 64px;
