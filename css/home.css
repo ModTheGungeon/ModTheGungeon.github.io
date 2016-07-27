@@ -410,6 +410,9 @@ a.de4dot {
   #cover-outer {
     left: 0;
   }
+  #pageversion {
+    right:  16px;
+  }
   #main-content #intro:nth-child(1) {
     padding-top: 64px;
   }

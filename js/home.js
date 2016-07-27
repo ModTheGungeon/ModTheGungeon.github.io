@@ -1,4 +1,5 @@
 document.getElementById("cover-outer").style.left = "0px";
+document.getElementById("pageversion").style.right = "16px";
 
 var coverDown = document.getElementById("cover-down");
 coverDown.outerHTML = "<div id=\"cover-down\"></div>";
