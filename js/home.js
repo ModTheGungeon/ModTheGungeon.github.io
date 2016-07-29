@@ -87,7 +87,5 @@ jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer.Core/releases?callb
             downloads.appendChild(elemDownload);
         }
         downloads.appendChild(all);
-    },
-    onTimeout: function(){
-    },
+    }
 });

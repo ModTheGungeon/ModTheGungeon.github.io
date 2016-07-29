@@ -8,8 +8,6 @@ jsonp("//example.com/a?callback=", {
 });
 */
 var jsonp = function(src, options) {
-    var script;
-
     options = options || { };
     options.callback = options.callback || "callback",
     options.onSuccess = options.onSuccess || function() { },
@@ -21,13 +19,13 @@ var jsonp = function(src, options) {
         document.head.removeChild(script);
     }, options.timeout);
 
-    window[options.callback] = window[options.callback] || function(data) {
+    window[options.callback] = function(data) {
         window.clearTimeout(timeoutTrigger);
         options.onSuccess(data);
         document.head.removeChild(script);
     };
 
-    script = document.createElement("script");
+    var script = document.createElement("script");
     script.type = "text/javascript";
     script.async = true;
     script.src = src + options.callback;
