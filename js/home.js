@@ -64,6 +64,7 @@ jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer.Core/releases?callb
             var data = json.data[i];
             var tag = data.tag_name;
             var asset = data.assets[0];
+            if (asset == null) continue;
             var url = asset.browser_download_url;
             var count = asset.download_count;
             
