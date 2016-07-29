@@ -58,7 +58,7 @@ window.addEventListener("scroll", function() {updateHeaderPos(window.scrollY);})
 
 var downloads = document.getElementById("downloads");
 var downloadNewest;
-jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer/releases?callback=", {
+jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer.Core/releases?callback=", {
     onSuccess: function(json) {
         var all = downloads.children[0];
         downloads.removeChild(all);
