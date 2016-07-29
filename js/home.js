@@ -60,8 +60,6 @@ var downloads = document.getElementById("downloads");
 var downloadNewest;
 jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer.Core/releases?callback=", {
     onSuccess: function(json) {
-        var all = downloads.children[0];
-        downloads.removeChild(all);
         for (var i = 0; i < json.data.length; i++) {
             var data = json.data[i];
             var tag = data.tag_name;
@@ -76,16 +74,25 @@ jsonp("//api.github.com/repos/ModTheGungeon/ETGMod.Installer.Core/releases?callb
             elemCount.className = "minor";
             elemCount.textContent = "(" + count + ")";
             elemDownload.appendChild(elemCount);
-            if (i == 0) {
-                downloadNewest = elemDownload;
-                elemDownload.setAttribute("newest", true);
-                var elemIcon = document.createElement("i");
-                elemIcon.className = "material-icons";
-                elemIcon.textContent = "file_download";
-                elemDownload.insertBefore(elemIcon, elemDownload.firstChild);
+            if (!data.prerelease) {
+                if (downloadNewest == null) {
+                    downloadNewest = elemDownload;
+                    elemDownload.setAttribute("newest", true);
+                    var elemIcon = document.createElement("i");
+                    elemIcon.className = "material-icons";
+                    elemIcon.textContent = "file_download";
+                    elemDownload.insertBefore(elemIcon, elemDownload.firstChild);
+                }
+            } else {
+                elemDownload.setAttribute("prerelease", true);
             }
             downloads.appendChild(elemDownload);
         }
-        downloads.appendChild(all);
     }
+});
+
+var showprereleases = document.getElementById("showprereleases");
+showprereleases.parentElement.style.display = "inline-block";
+showprereleases.addEventListener("change", function() {
+    downloads.setAttribute("showprereleases", showprereleases.checked);
 });

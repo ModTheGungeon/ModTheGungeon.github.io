@@ -34,7 +34,7 @@
     	
         <div id="cover-outer">
         	<p id="pageversion" style="position: absolute; bottom: 0; right: 144px; opacity: 0.3;">
-        	V11</p>
+        	V12</p>
             <div id="cover-logo"></div>
 			<div id="cover-bullet">
 				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
@@ -133,8 +133,15 @@
 		<sup>2</sup>: USE MONO, NOT WINE!
 	</sub>
 	<div class="buttons" id="downloads">
-		<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases">ALL RELEASES</a>
+		<sub>
+			<a href="#"><input type="checkbox" id="showprereleases"><label for="showprereleases">SHOW PRE-RELEASES</label></a>
+			<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases">ALL RELEASES ON GITHUB</a>
+		</sub>
+		<noscript>
+			<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases">ALL RELEASES<span class="minor">(this box gets filled with JS)</span></a>
+		</noscript>
 	</div>
+	<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases"></a>
 </div>
 <div right>
 	<img id="installer_screen" alt="" src="/img/installer_win.png">
@@ -158,7 +165,7 @@
 	Under the hood, the installer uses MonoMod, which is powered by Mono.Cecil. Both are also open-source!</p>
 	<sub>Generally licensed under the MIT license. Specifically:<br>
 	ETGMod.Installer.Core is licensed under the MIT license.<br>
-	ETGMod.Installer.Citrus, the version offered here, is an "extension" using <a class="de4dot" href="https://github.com/0xd4d/de4dot">de4dot</a>. Both are licensed under the <a class="de4dot" href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.<br>
+	ETGMod.Installer.Citrus, the version offered here, is an "extension" using <a class="de4dot" href="https://github.com/0xd4d/de4dot">de4dot</a>. Both Citrus and de4dot are licensed under the <a class="de4dot" href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.<br>
 	Everything else is licensed under the MIT license.</sub>
 	<br>
 	<a class="button huge" href="https://github.com/ModTheGungeon/">MOD THE GUNGEON ON <img alt="GITHUB" src="/img/icon_github.png"></img></a>

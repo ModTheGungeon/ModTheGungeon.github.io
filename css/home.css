@@ -313,6 +313,7 @@
 }
 #download>[right] {
   width: 320px;
+  padding-bottom:16px;
 }
 #oses {
   position: relative;
@@ -338,6 +339,22 @@
 }
 .buttons a:hover[newest="true"] {
   background: #44a962;
+}
+#download .buttons>sub>a:nth-child(1) {
+  display: none;
+}
+#downloads a[prerelease="true"] {
+  display: none;
+  
+}
+#downloads a[prerelease="true"], #downloads.buttons>sub>a>input:checked+label, #downloads.buttons>sub>a[href="#"]:hover>label {
+  background: #b70327;
+}
+#downloads a[prerelease="true"]:hover, #downloads.buttons>sub>a:hover>input:checked+label {
+  background: #fb0b3b;
+}
+#downloads[showprereleases="true"] a[prerelease="true"] {
+  display: inline-block;
 }
 
 #code {
