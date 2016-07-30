@@ -192,8 +192,43 @@ section.flex>[left] {
 }
 .buttons>sub>a>label {
   transition: background 0.3s, box-shadow 0.3s;
-  padding: 2px 4px;
+  padding: 2px 4px 2px 24px;
   border-radius: 3px;
+  cursor: pointer;
+}
+.buttons>sub>a>label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.87);
+  border-radius: 2px;
+}
+.buttons>sub>a>label:after {
+  transition: opacity 0.3s;
+  content: "check";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  color: rgba(255, 255, 255, 0.87);
+  opacity: 0;
 }
 .buttons>sub>a[href="#"]:hover>label {
   background: #2e7343;
@@ -205,6 +240,9 @@ section.flex>[left] {
 }
 .buttons>sub>a:hover>input:checked+label {
   background: #44a962;
+}
+.buttons>sub>a>input:checked+label:after {
+  opacity: 1;
 }
 .buttons a, a.button {
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
