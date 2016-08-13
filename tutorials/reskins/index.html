@@ -58,11 +58,22 @@
 <div id="title"><h1>Mod the Gungeon Tutorial: Introduction</h1></div>
 
 <div id="body">
-        <p>Mod the Gungeon is based on the concept of backends and mods. Backends access the game's code and provide an API for mods to use - sometimes including workarounds or simplifying the usage. Mods, on the other hand, use the APIs (Application Programming Interfaces) provided by backends to add actual features to the game.</p>
-        <p>The very base backend of Mod the Gungeon is ETGMod. It not only implements the standard API but is also responsible for managing both mods and backends; backends implement APIs using the ETGMod API.</p>
-        <p>It's very important to understand this separation, as mods can be loaded during runtime while backends have to be injected into the game using the special installer (ETGMod.Installer).</p>
-        <p>The installer by default installs ETGMod along with selected backends from the repository and has an option for installing backends outside the repository (unsafe, unless you trust the source).</p>
-	<p>You can now move on to <a href="../installing">Installing ETGMod</a>, the base backend.</p>
+	1. Launch ETGMod installer
+	2. Navigate to the "API Mods" tab
+	3. Click "Base Beta". If you aren't already, opt into the beta of Enter The Gungeon.
+	4. Install ETGMod.
+	5. Wait 'till it's done then X it out
+	6. Launch the game and view the Dog Roll intro.
+	It should say Dog Roll.
+	If it doesn't, you messed up. Start all over again.
+	6. Get the latest copy of 0x0ade's dumps. You can use the folders to edit individual sprites or the spritesheets to edit them all at once.
+	7. Put the sprite-sheets you have edited (or folders of individual sprites) into
+	C:\Program Files (x86)\Steam\steamapps\common\Enter the Gungeon\Resources\sprites
+	So, if you made a new Robot spritesheet, you would put Robot.png there.
+	You do not even have to restart the game!
+	Just switch characters and then switch back!
+	Handy, eh?
+	And that concludes our tutorial!
 </div>
 
     </div></body>
