@@ -1,2 +1,2 @@
-Base Beta|http://modthegungeon.github.io/backends/BaseBeta-R1.zip
+Base Beta|http://modthegungeon.github.io/backends/BaseBeta-R2.zip
 ExampleAPI|http://modthegungeon.github.io/backends/ExampleAPI-R1.zip
