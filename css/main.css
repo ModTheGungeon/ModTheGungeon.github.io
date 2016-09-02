@@ -62,7 +62,7 @@ a:link, a:visited {
 }
 a:hover, a:active {
   color: #58cbfc;
-  text-shadow: 0 0 32px;
+  text-shadow: currentColor 0 0 16px;
 }
 
 .dark {
