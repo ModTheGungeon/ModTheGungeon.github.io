@@ -1,1 +1,0 @@
-ExampleAPI|http://modthegungeon.github.io/backends/ExampleAPI-R1.zip
