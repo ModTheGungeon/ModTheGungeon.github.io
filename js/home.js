@@ -53,7 +53,11 @@ var updateHeaderPos = function(scrollY) {
         header.style.position = "absolute";
     }
 };
-updateHeaderPos(0);
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", function() { updateHeaderPos(0); });
+} else {
+    window.onload = function() { updateHeaderPos(0); };
+}
 window.addEventListener("scroll", function() {updateHeaderPos(window.scrollY);});
 
 var downloads = document.getElementById("downloads");
