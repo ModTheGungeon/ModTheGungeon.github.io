@@ -377,28 +377,3 @@ a.button {
     min-height: 120px;
   }
 }
-
-#shutdown-notice {
-  color: #000;
-  background-color: #ff5555;
-  text-align: center;
-}
-
-#shutdown-notice h1 {
-  margin: 0 0 0 0;
-}
-
-#shutdown-notice a {
-  color: #3333ff;
-}
-
-
-@media only screen and (min-width: 1100px) {
-  #shutdown-notice {
-    margin-left: 5em;
-    margin-right: 5em;
-    border: 1px solid #ff5555;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-  }
-}
