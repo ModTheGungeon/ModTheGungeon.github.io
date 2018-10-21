@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Mod the Gungeon</title>
+        
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" sizes="192x192" href="favicon-192.png">
+        <link rel="icon" sizes="512x512" href="favicon-512.png">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+		<noscript><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></noscript>
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/home.css">
+
+        <script type="text/javascript" src="js/main.js" async defer></script>
+        <script type="text/javascript" src="js/home.js" async defer></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <meta property="og:title" content="Mod the Gungeon" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://modthegungeon.github.io/" />
+		<meta property="og:image" content="https://modthegungeon.github.io/img/logo_anim.gif" itemprop="thumbnailUrl" />
+		<!-- Show only when not on index -->
+		<!--meta property="og:site_name" content="Mod the Gungeon" /-->
+        <meta name="description" content="Homepage for the efforts to mod &quot;Enter the Gungeon&quot;. Always blame @Zatherz.">
+    </head>
+    <body>
+    	
+        <div id="cover-outer">
+        	<p id="pageversion" style="position: absolute; bottom: 0; right: 144px; opacity: 0.3;">V13</p>
+            <div id="cover-logo"></div>
+			<div id="cover-bullet">
+				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
+				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
+				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
+				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
+				<div class="cover-bulletp"></div><div class="cover-bulletp"></div><div class="cover-bulletp"></div>
+			</div>
+			<div id="cover-binary"></div>
+
+			<!--div warning>
+				<h1>PAGE UNDER CONSTRUCTION!</h1>
+				<p>Ping @0x0ade in the Gungeon Discord server in case burning HTML tags fly around.</p>
+            </div-->
+        </div>
+        
+        <a id="cover-down" href="index.html#main"></a>
+
+        <div id="main">
+
+<header>
+	<img id="logo" alt="" src="img/logo.png">
+	<div id="navbutton">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<nav>
+		<img id="navlogo" alt="" src="img/logo.png">
+		<a href="index.html">HOME</a>
+		<section>
+			<a href="index.html#intro">INTRO</a>
+			<a href="index.html#features">FEATURES</a>
+			<a href="index.html#download">DOWNLOAD</a>
+			<a href="index.html#mods">MODS</a>
+			<a href="index.html#code">CODE</a>
+			<a href="index.html#help">HELP &amp; FEEDBACK</a>
+			<!-- <a href="#feedback">TASKS &amp; FEEDBACK</a> -->
+		</section>
+		<a href="gungeonapidocs.html">API DOCUMENTATION</a>
+		<a href="tutorials.html">TUTORIALS</a>
+		<a href="credits.html">CREDITS</a>
+	</nav>
+	<div id="navdark" class="dark"></div>
+</header>
+
+<div id="main-content">
+
+<section id="intro">
+	<h1>Welcome to Mod the Gungeon RELOADED!</h1>
+  <p>
+    ETGMod Reloaded is the upcoming iteration of ETGMod. Right now, it is heavily work in progress and is not ready for end user use yet.
+  </p>
+  
+	<p>Mod the Gungeon is an open-source modding platform for Enter the Gungeon. It consists of:</p>
+	<ul>
+		<li>
+			ETGMod, the base mod and mod loader, which itself consists of a few components:
+			<ul>
+				<li>Core - responsible for injecting all of these components</li>
+				<li>Base - mod loader and APIs</li>
+				<li>GUI - utilities for making custom GUIs</li>
+				<li>Console - a fully functional console with very advanced syntax features</li>
+				<li>TexMod - support for patching textures and animations</li>
+			</ul>
+		</li>
+		<li>Installer.Headless, the installer</li>
+	</ul>
+	<p>The main purpose of ETGMod is to be a mod loader, therefore it doesn't add any end user features (such as items or enemies) by itself.</p>
+	<p>Below is a list of what we have right now:</p>
+</section>
+
+<section id="features">
+	<div function mediabg noextend>
+		<div fg>
+			<h1>CONSOLE</h1>
+			<p>Test synergies, various scenarios, debug your mods, add your own commands - the possibilities are endless.</p>
+		</div>
+		<video media poster="https://i.imgur.com/mrtVVOeh.jpg"
+			preload="auto" autoplay="autoplay" muted="muted"
+			loop="loop" webkit-playsinline
+			style="bottom: 0; transform: translate(-50%, 0px); width: 100%;">
+			<source src="vids/debugconsole.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div function mediabg>
+		<div fg>
+			<h1>LUA MODDING</h1>
+			<p>Write your mods in Lua, an extremely simple and small programming language with a clean and simple API.</p>
+			<sub>
+        Note: ETGMod mods used to be written in C#, this is no longer the case and C# is no longer supported for mods.
+        The Lua API has also changed significantly, which is not reflected in the video.
+      </sub>
+		</div>
+		<video media poster="https://i.imgur.com/DXzvjqSh.jpg"
+			preload="auto" autoplay="autoplay" muted="muted"
+			loop="loop" webkit-playsinline>
+			<source src="vids/lua.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div function mediabg>
+		<div fg>
+			<h1>TEXMOD</h1>
+			<p>TexMod is a very powerful texture patching system that replaces the old basic sprite replacement method. It not only allows you to patch textures, but also patch and modify the flow of <em>entire animations</em>.</p>
+		</div>
+		<video media poster="https://i.imgur.com/DXzvjqSh.jpg"
+			preload="auto" autoplay="autoplay" muted="muted"
+			loop="loop" webkit-playsinline>
+			<source src="vids/texmod.mp4" type="video/mp4">
+		</video>
+	</div>
+</section>
+
+<section id="download" class="flex">
+	<div left>
+		<h1>Install ETGMod Reloaded</h1>
+		<p>
+      The Mod the Gungeon installer is how you install and update ETGMod.
+      There is currently no available graphical installer for Reloaded.
+    </p>
+    <p>
+      Simply unpack the .zip, then run <code>MTGInstaller install ETGMod</code> to install Reloaded.
+    </p>
+    <p>
+      NOTE: This is an <em>installer</em>, not the actual ETGMod. It simply downloads the chosen version of ETGMod
+      then installs it, but it is not ETGMod itself.
+    </p>
+
+		<ul>
+			<li>Requires .NET Framework 4.5+ on Windows and Mono on other platforms.</li>
+			<li>The download is an <code>.exe</code> on all platforms - use <a href="https://modthegungeon.zatherz.eu/www.mono-project.com">Mono</a> on Linux and <a href="http://www.mono-project.com/docs/getting-started/install/mac/">Mac</a> to run it. <b>DO NOT</b> use Wine.</li>
+			<li>Don't worry if SmartScreen blocks it - it uses a stupid algorithm that just detects that the installer is modifying the game.</li>
+		</ul>
+		<div class="buttons" id="downloads">
+			<sub>
+				<a href="index.html#"><input type="checkbox" id="showprereleases"><label for="showprereleases">SHOW PRE-RELEASES</label></a>
+				<a href="https://github.com/ModTheGungeon/Installer.Headless/releases">ALL RELEASES</a>
+				<!-- <a href="http://lastbullet.net/mydownloads.php?action=view_down&did=17528">LATEST SPRITE DUMP</a> -->
+			</sub>
+		</div>
+		<noscript>
+			<a href="https://github.com/ModTheGungeon/Installer.Headless/releases">ALL RELEASES<span class="minor">(this box gets filled with JS)</span></a>
+		</noscript>
+	</div>
+	<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases"></a>
+	<div right>
+		<img id="installer_screen" alt="" src="img/installer_win.png">
+		<div id="oses">
+			<p>Runs on:</p>
+			<img alt="" src="img/os_win.png">1
+			<img alt="" src="img/os_mac.png">2
+			<img alt="" src="img/os_lin.png">2
+		</div>
+	</div>
+</section>
+
+<section id="mods" class="flex">
+	<div left>
+		<div id="examplemodcodeimg"></div>
+		<h1>Mods</h1>
+		<p>As Mod the Gungeon is an unofficial modding platform (even though it's known by the developers of the game), we can't add Steam Workshop support. However, we've partnered with <a href="https://modworkshop.net/">Mod Workshop</a>, the popular forum and site for PAYDAY 2 modding, to provide a Mod the Gungeon download section.</p>
+		<a class="button huge" href="https://modworkshop.net/mydownloads.php?action=browse_cat&cid=286">DOWNLOAD MODS ON MODWORKSHOP <img alt="MODWORKSHOP" src="img/icon_modworkshop.png"></a>
+	</div>
+	<div right style="margin: 0 auto; text-align: center">
+		<img src="img/modworkshoplogo.png" alt="MODWORKSHOP" style="width: 50%; margin: 0 auto; height: auto;">
+	</div>
+</section>
+
+<section id="code" class="flex">
+	<div left>
+		<div id="codeimg"></div>
+	</div>
+	<div right>
+		<h1>Open-Source on GitHub</h1>
+		<p>Mod the Gungeon is an open-source project, by the community, for the community.
+		Take a look at the source on GitHub, throw issues in our direction or even fork and send pull requests!
+		Under the hood, the installer uses MonoMod, which is powered by Mono.Cecil. Both are also open-source!</p>
+		<p>Licensed under the MIT license, with the exception of external components (which are all MIT compatible). Read the <a href="https://raw.githubusercontent.com/ModTheGungeon/ETGMod/master/LICENSE_ETGMOD" class=bright>plaintext full license</a> for more information.</p>
+		<a class="button huge" href="https://github.com/ModTheGungeon/">MOD THE GUNGEON ON <img alt="GITHUB" src="img/icon_github.png"></a>
+	</div>
+</section>
+
+<section id="help" class="flex">
+	<div left>
+		<h1>Discord</h1>
+		<p><a href="https://discordapp.com">Discord</a> is a chat program made mainly for gamers, with voice chat and text chat features. The semi-official Enter the Gungeon Discord server has a text channel for Mod the Gungeon discussion (and a modder only channel for development discussion).</p>
+		<p>In the <code>#modding</code> channel you can ask for help, give feedback, ideas etc. Feel free to join the channel with the button below. No registration should be needed.</p>
+		<a class="button huge" target=_blank href="https://discord.gg/ngkYDes">JOIN #MODDING <img alt="DISCORD" src="img/icon_discord.png" style="position: relative; top: 3px;"></a>	
+	</div>
+	<div right>
+		<div id="discordimg"></div>
+	</div>
+</section>
+
+<!-- RIP 
+				<section id="feedback" class="flex">
+<div left>
+	<h1>Tasks and feedback on Trello</h1>
+	<p>Mod the Gungeon uses Trello to coordinate which tasks to work on.
+	Votes and comments are open for anyone having a Trello account and the discussion section contains cards to comment on with feedback or feature wishes.</p>
+	<br>
+	<a class="button huge" href="https://trello.com/b/aCclwfZH/mod-the-gungeon">MOD THE GUNGEON ON TRELLO</a>
+</div>
+<div right>
+	<img id="trelloimg" alt="" src="/img/trello.png">
+</div>
+				</section>-->
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>

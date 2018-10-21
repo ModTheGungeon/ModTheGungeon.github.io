@@ -1,0 +1,107 @@
+latest_version: 2.0.10
+
+exe_orig_subsitutions:
+  - from: UnityEngine.Resources::Load
+    to:   UnityEngine.Resources::Ooad
+  - from: UnityEngine.Resources::LoadAsync
+    to:   UnityEngine.Resources::OoadAsync
+  - from: UnityEngine.Resources::LoadAll
+    to:   UnityEngine.Resources::OoadAll
+  - from: UnityEngine.Resources::GetBuiltinResource
+    to:   UnityEngine.Resources::OetBuiltinResource
+  - from: UnityEngine.Resources::UnloadAsset
+    to:   UnityEngine.Resources::OnloadAsset
+  - from: UnityEngine.Resources::UnloadUnusedAssets
+    to:   UnityEngine.Resources::OnloadUnusedAssets
+#  - from: UnityEngine.Object::INTERNAL_CALL_Internal_InstantiateSingle
+#    to:   UnityEngine.Object::ONTERNAL_CALL_Internal_InstantiateSingle
+#  - from: UnityEngine.Object::INTERNAL_CALL_Internal_InstantiateSingleWithParent
+#    to:   UnityEngine.Object::ONTERNAL_CALL_Internal_InstantiateSingleWithParent
+#  - from: UnityEngine.Object::Internal_CloneSingle
+#    to:   UnityEngine.Object::Onternal_CloneSingle
+#  - from: UnityEngine.Object::Internal_CloneSingleWithParent
+#    to:   UnityEngine.Object::Onternal_CloneSingleWithParent
+
+viable_patch_targets:
+  - Assembly-CSharp
+  - UnityEngine.CoreModule
+
+executables:
+  - EtG.x86
+  - EtG.x86_64
+  - EtG_OSX
+  - EtG.exe
+  - UnityPlayer.dll
+
+managed_files:
+  - GalaxyCSharp.dll # windows only??¿¿
+  - Assembly-CSharp.dll
+  - Assembly-CSharp-firstpass.dll
+  - Assembly-UnityScript.dll
+  - Boo.Lang.dll
+  - ConditionalExpression.dll
+  - dfScriptLite.dll
+  - Mono.Posix.dll
+  - Mono.Security.dll
+  - mscorlib.dll
+  - PlayMaker.dll
+  - System.Configuration.dll
+  - System.Core.dll
+  - System.dll
+  - System.Security.dll
+  - System.Xml.dll
+  - UnityEngine.dll
+  - UnityEngine.dll.mdb
+  - UnityEngine.ParticleSystemModule.dll
+  - UnityEngine.ClusterRendererModule.dll
+  - UnityEngine.ClothModule.dll
+  - UnityEngine.WebModule.dll
+  - UnityEngine.TextRenderingModule.dll
+  - UnityEngine.AnimationModule.dll
+  - UnityEngine.IMGUIModule.dll
+  - UnityEngine.GridModule.dll
+  - UnityEngine.Timeline.dll
+  - UnityEngine.UnityAnalyticsModule.dll
+  - UnityEngine.UnityWebRequestTextureModule.dll
+  - UnityEngine.AssetBundleModule.dll
+  - UnityEngine.AIModule.dll
+  - UnityEngine.UnityWebRequestWWWModule.dll
+  - UnityEngine.Networking.dll
+  - UnityEngine.SpatialTracking.dll
+  - UnityEngine.CoreModule.dll
+  - UnityEngine.UnityWebRequestAudioModule.dll
+  - UnityEngine.VehiclesModule.dll
+  - UnityEngine.UnityWebRequestModule.dll
+  - UnityEngine.VRModule.dll
+  - UnityEngine.DirectorModule.dll
+  - UnityEngine.ClusterInputModule.dll
+  - UnityEngine.TerrainPhysicsModule.dll
+  - UnityEngine.Physics2DModule.dll
+  - UnityEngine.VideoModule.dll
+  - UnityEngine.UNETModule.dll
+  - UnityEngine.InputModule.dll
+  - UnityEngine.AudioModule.dll
+  - UnityEngine.PhysicsModule.dll
+  - UnityEngine.GameCenterModule.dll
+  - UnityEngine.PerformanceReportingModule.dll
+  - UnityEngine.WindModule.dll
+  - UnityEngine.SpriteShapeModule.dll
+  - UnityEngine.TerrainModule.dll
+  - UnityEngine.CrashReportingModule.dll
+  - UnityEngine.ParticlesLegacyModule.dll
+  - UnityEngine.SharedInternalsModule.dll
+  - UnityEngine.UnityConnectModule.dll
+  - UnityEngine.StyleSheetsModule.dll
+  - UnityEngine.UI.dll
+  - UnityEngine.UIModule.dll
+  - UnityEngine.ARModule.dll
+  - UnityEngine.StandardEvents.dll
+  - UnityEngine.JSONSerializeModule.dll
+  - UnityEngine.AccessibilityModule.dll
+  - UnityEngine.UIElementsModule.dll
+  - UnityEngine.ScreenCaptureModule.dll
+  - UnityEngine.ImageConversionModule.dll
+  - UnityEngine.TilemapModule.dll
+  - UnityEngine.SpriteMaskModule.dll
+  - Unity.Analytics.DataPrivacy.dll
+
