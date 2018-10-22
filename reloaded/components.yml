@@ -1,3 +1,3 @@
-- name: ETGMod
-  versions_url: https://modthegungeon.zatherz.eu/components/ETGMod/versions.yml
+- name: ModTheGungeon
+  versions_url: https://modthegungeon.zatherz.eu/components/ModTheGungeon/versions.yml
 
