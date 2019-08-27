@@ -60,12 +60,10 @@ var updateHeaderPos = function(scrollY) {
 updateHeaderPos(0);
 window.addEventListener("scroll", function() {updateHeaderPos(window.scrollY);});
 
-let OS_NAME = "none";
-
 var downloads = document.getElementById("downloads");
 var downloadNewest;
 
-function reloadDownloads() {
+function reloadDownloads(os_name) {
     Array.prototype.forEach.call(downloads.childNodes, function(el) {
         if (el.tagName != "A") return;
         console.log("delete child: ");
@@ -89,7 +87,7 @@ function reloadDownloads() {
 
                 console.log(url);
 
-                if (!url.includes(OS_NAME)) continue;
+                if (!url.includes(os_name)) continue;
 
                 var count = asset.download_count;
                 
@@ -132,8 +130,7 @@ function updateOS(os) {
     if (os == "none") document.getElementById("downloads").style.display = "none";
     else document.getElementById("downloads").style.display = "inherit";
 
-    OS_NAME = os;
-    reloadDownloads();
+    reloadDownloads(os);
 
     console.log("new os: " + os);
 }
