@@ -75,39 +75,45 @@ function reloadDownloads() {
 
     downloadNewest = null;
 
-    jsonp("//api.github.com/repos/ModTheGungeon/Installer.Godot/releases?callback=", {
+    jsonp("//api.github.com/repos/ModTheGungeon/SemiInstaller/releases?callback=", {
     onSuccess: function(json) {
         for (var i = 0; i < json.data.length; i++) {
             var data = json.data[i];
             var tag = data.tag_name;
-            var asset = data.assets[0];
-            if (asset == null) continue;
-            var url = asset.browser_download_url;
 
-            if (!url.includes("beta1")) continue;
+            for (var j = 0; j < data.assets.length; j++) {
+                var asset = data.assets[j];
 
-            var count = asset.download_count;
-            
-            var elemDownload = document.createElement("a");
-            elemDownload.href = url;
-            elemDownload.textContent = tag;
-            var elemCount = document.createElement("span");
-            elemCount.className = "minor";
-            elemCount.textContent = "(" + count + ")";
-            elemDownload.appendChild(elemCount);
-            if (!data.prerelease) {
-                if (downloadNewest == null) {
-                    downloadNewest = elemDownload;
-                    elemDownload.setAttribute("newest", true);
-                    var elemIcon = document.createElement("i");
-                    elemIcon.className = "material-icons";
-                    elemIcon.textContent = "file_download";
-                    elemDownload.insertBefore(elemIcon, elemDownload.firstChild);
+                if (asset == null) continue;
+                var url = asset.browser_download_url;
+
+                console.log(url);
+
+                if (!url.includes(OS_NAME)) continue;
+
+                var count = asset.download_count;
+                
+                var elemDownload = document.createElement("a");
+                elemDownload.href = url;
+                elemDownload.textContent = tag;
+                var elemCount = document.createElement("span");
+                elemCount.className = "minor";
+                elemCount.textContent = "(" + count + ")";
+                elemDownload.appendChild(elemCount);
+                if (!data.prerelease) {
+                    if (downloadNewest == null) {
+                        downloadNewest = elemDownload;
+                        elemDownload.setAttribute("newest", true);
+                        var elemIcon = document.createElement("i");
+                        elemIcon.className = "material-icons";
+                        elemIcon.textContent = "file_download";
+                        elemDownload.insertBefore(elemIcon, elemDownload.firstChild);
+                    }
+                } else {
+                    elemDownload.setAttribute("prerelease", true);
                 }
-            } else {
-                elemDownload.setAttribute("prerelease", true);
+                downloads.appendChild(elemDownload);
             }
-            downloads.appendChild(elemDownload);
         }
     }
 });
@@ -127,6 +133,8 @@ function updateOS(os) {
     else document.getElementById("downloads").style.display = "inherit";
 
     reloadDownloads();
+
+    OS_NAME = os;
 }
 
 function getOS() {
