@@ -1,0 +1,22 @@
+#title {
+  margin: -32px -8px 0 -16px;
+  padding: 32px 16px 8px 16px;
+  background: #4f99b8;
+}
+
+#prerequisites_header, #prerequisites_list {
+  background: #b84f64;
+}
+#prerequisites_header {
+  margin: 0 -8px 0 -16px;
+  padding: 8px 8px 1px 16px;
+}
+#prerequisites_list {
+  margin: -24px -8px 0 -16px;
+  padding: 1px 8px 8px 16px;
+}
+
+li a {
+  color: rgba(255, 255, 255, 0.87) !important;
+  text-shadow: none;
+}

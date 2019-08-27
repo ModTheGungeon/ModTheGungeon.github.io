@@ -1,0 +1,12 @@
+- key: 0.1.0-beta2
+  name: v0.1.0-beta2 RELOADED
+  url: https://modthegungeon.zatherz.eu/components/ETGMod/0.1.0-beta2.zip
+  release_date: 16.08.2018 00:52 CEST
+  supported_gungeon: 2.0.10
+  requires_patched_exe: true
+- key: 0.1.0-beta1
+  name: v0.1.0-beta1 RELOADED
+  url: https://modthegungeon.zatherz.eu/components/ETGMod/0.1.0-beta1.zip
+  release_date: 15.08.2018 10:39 CEST
+  supported_gungeon: 2.0.10
+  requires_patched_exe: true
