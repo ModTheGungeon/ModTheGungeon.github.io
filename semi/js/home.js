@@ -1,6 +1,6 @@
-if (typeof mainY === "undefined") {
-  setTimeout(homejs, 1000);
-}
+// if (typeof mainY === "undefined") {
+//   setTimeout(homejs, 1000);
+// }
 
 document.getElementById("cover-outer").style.left = "0px";
 document.getElementById("pageversion").style.right = "16px";
