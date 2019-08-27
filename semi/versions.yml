@@ -1,0 +1,12 @@
+- name: semi
+  versions:
+    - key: 0.1
+      name: Semi
+      url: "https://modthegungeon.eu/semi/BUILD/semi/0.1zip"
+      requires_patched_exe: false
+- name: semi-dev
+  versions:
+    - key: 0.1-dev
+      name: Semi for Development
+      url: "https://modthegungeon.eu/semi/BUILD/semi-dev/0.1-dev.zip"
+      requires_patched_exe: false

@@ -1,0 +1,18 @@
+- name: ETGMod_local
+  versions:
+    - key: latest
+      name: Latest local build
+      path: '/home/zatherz/Projects/ModTheGungeon/ETGMod/build/ETGMOD.zip'
+      requires_patched_exe: true
+- name: MTG_local
+  versions:
+    - key: latest
+      name: Latest local build for AG&D
+      path: '/home/zatherz/Projects/ModTheGungeon/ModTheGungeon/build/MTG-DIST.zip'
+      requires_patched_exe: true
+- name: semi
+  versions:
+    - key: latest
+      name: Latest local Semi build
+      path: '/home/zatherz/Projects/ModTheGungeon/Semi/build/SEMI-LOADER.zip'
+      requires_patched_exe: false
