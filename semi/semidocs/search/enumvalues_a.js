@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['korean_1965',['KOREAN',['../namespaceSemi_1_1Patches.html#a161fdadfe7570828872490a36031ad95adcd90939dc8ad7a417313c5726cf732f',1,'Semi::Patches']]]
+  ['korean_2007',['KOREAN',['../namespaceSemi_1_1Patches.html#a161fdadfe7570828872490a36031ad95adcd90939dc8ad7a417313c5726cf732f',1,'Semi::Patches']]]
 ];
