@@ -132,9 +132,10 @@ function updateOS(os) {
     if (os == "none") document.getElementById("downloads").style.display = "none";
     else document.getElementById("downloads").style.display = "inherit";
 
+    OS_NAME = os;
     reloadDownloads();
 
-    OS_NAME = os;
+    console.log("new os: " + os);
 }
 
 function getOS() {
