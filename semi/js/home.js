@@ -73,6 +73,8 @@ function reloadDownloads(os_name) {
 
     downloadNewest = null;
 
+    console.log("reload dls: " + os_name);
+
     jsonp("//api.github.com/repos/ModTheGungeon/SemiInstaller/releases?callback=", {
     onSuccess: function(json) {
         for (var i = 0; i < json.data.length; i++) {
