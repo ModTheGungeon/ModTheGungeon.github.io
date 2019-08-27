@@ -168,27 +168,44 @@
     	<p>
     		Note - the Installer is not the Mod Loader, and the Mod Loader is not the Installer. This is often confused by people reporting issues. The installer merely installs the latest version of the Semi Mod Loader, and the installer version is not the same thing as the Semi version.
     	</p>
-    <p>
-      Simply unpack the .zip, then run <code>MTGInstaller install ModTheGungeon</code> to install Reloaded.
-    </p>
-    <p>
-      NOTE: This is an <em>installer</em>, not the actual Mod the Gungeon. It simply downloads the chosen version of Mod the Gungeon and then installs it, but it is not Mod the Gungeon itself.
-    </p>
+    <span>
+      Select your operating system:
+    </span>
 
-		<ul>
-			<li>Requires .NET Framework 4.5+ on <strong>Windows</strong>.</li>
-			<li>The download is an <code>.exe</code> on all platforms - use <a href="www.mono-project.com">Mono</a> on <strong>Linux</strong> and <a href="http://www.mono-project.com/docs/getting-started/install/mac/"><strong>Mac</strong></a> to run it. <strong>DO NOT USE WINE</strong>.</li>
-			<li>SmartScreen might block the installer and call it a threat, risk or something else. SmartScreen is a ridiculous Microsoft scam program requiring a ridiculous amount of money for a "certificate" so that users don't receive the intentionally scary message. Ignore it or scan the installer with VirusTotal if you don't trust it.</li>
-		</ul>
+    <select id=os_select>
+    	<option value="none"> Click here to select </option>
+    	<option value="windows"> Windows </option>
+    	<option value="linux"> Linux </option>
+    	<option value="macosx"> Mac OS X </option>
+    </select>
+
+
+
+    	<div class="os_windows">
+			<ul>
+				<li>Requires .NET Framework 4.5+ on <strong>Windows</strong>.</li>
+				<li>SmartScreen might block the installer and call it a threat, risk or something else. SmartScreen is a ridiculous Microsoft scam program requiring a ridiculous amount of money for a "certificate" so that users don't receive the intentionally scary message. Ignore it or scan the installer with VirusTotal if you don't trust it.</li>
+			</ul>
+		</div>
+
+		<div class="os_linux os_macosx">
+			<ul>
+				<li>The download is an <code>.exe</code> on all platforms - use <a href="www.mono-project.com">Mono</a> on <strong>Linux</strong> and <a href="http://www.mono-project.com/docs/getting-started/install/mac/"><strong>Mac</strong></a> to run it. <strong>DO NOT USE WINE</strong>.</li>
+			</ul>
+		</div>
+
+		<div class="os_none">
+			<h1> You have to select your OS to download the installer. </h1>
+		</div>
 		<div class="buttons" id="downloads">
 			<sub>
 				<a href="index.html#"><input type="checkbox" id="showprereleases"><label for="showprereleases">SHOW PRE-RELEASES</label></a>
-				<a href="https://github.com/ModTheGungeon/Installer.Headless/releases">ALL RELEASES</a>
+				<a href="https://github.com/ModTheGungeon/Installer.Godot/releases">ALL RELEASES</a>
 				<!-- <a href="http://lastbullet.net/mydownloads.php?action=view_down&did=17528">LATEST SPRITE DUMP</a> -->
 			</sub>
 		</div>
 		<noscript>
-			<a href="https://github.com/ModTheGungeon/Installer.Headless/releases">ALL RELEASES<span class="minor">(this box gets filled with JS)</span></a>
+			<a href="https://github.com/ModTheGungeon/Installer.Godot/releases">ALL RELEASES<span class="minor">(this box gets filled with JS)</span></a>
 		</noscript>
 	</div>
 	<a href="https://github.com/ModTheGungeon/ETGMod.Installer.Core/releases"></a>
@@ -196,9 +213,9 @@
 		<img id="installer_screen" alt="" src="img/installer_win.png">
 		<div id="oses">
 			<p>Runs on:</p>
-			<img alt="" src="img/os_win.png">1
-			<img alt="" src="img/os_mac.png">2
-			<img alt="" src="img/os_lin.png">2
+			<img alt="" src="img/os_win.png">
+			<img alt="" src="img/os_mac.png">
+			<img alt="" src="img/os_lin.png">
 		</div>
 	</div>
 </section>

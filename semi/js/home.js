@@ -1,5 +1,3 @@
-function homejs() {
-
 if (typeof mainY === "undefined") {
   setTimeout(homejs, 1000);
 }
@@ -62,9 +60,22 @@ var updateHeaderPos = function(scrollY) {
 updateHeaderPos(0);
 window.addEventListener("scroll", function() {updateHeaderPos(window.scrollY);});
 
+let OS_NAME = "none";
+
 var downloads = document.getElementById("downloads");
 var downloadNewest;
-jsonp("//api.github.com/repos/ModTheGungeon/Installer.Headless/releases?callback=", {
+
+function reloadDownloads() {
+    Array.prototype.forEach.call(downloads.childNodes, function(el) {
+        if (el.tagName != "A") return;
+        console.log("delete child: ");
+        console.log(el);
+        downloads.removeChild(el);
+    });
+
+    downloadNewest = null;
+
+    jsonp("//api.github.com/repos/ModTheGungeon/Installer.Godot/releases?callback=", {
     onSuccess: function(json) {
         for (var i = 0; i < json.data.length; i++) {
             var data = json.data[i];
@@ -72,6 +83,9 @@ jsonp("//api.github.com/repos/ModTheGungeon/Installer.Headless/releases?callback
             var asset = data.assets[0];
             if (asset == null) continue;
             var url = asset.browser_download_url;
+
+            if (!url.includes("beta1")) continue;
+
             var count = asset.download_count;
             
             var elemDownload = document.createElement("a");
@@ -98,12 +112,47 @@ jsonp("//api.github.com/repos/ModTheGungeon/Installer.Headless/releases?callback
     }
 });
 
+}
+
+
+function updateOS(os) {
+    Array.prototype.forEach.call(document.getElementsByClassName("os_none"), function(el) { el.style.display = "none"; })
+    Array.prototype.forEach.call(document.getElementsByClassName("os_windows"), function(el) { el.style.display = "none"; })
+    Array.prototype.forEach.call(document.getElementsByClassName("os_linux"), function(el) { el.style.display = "none"; })
+    Array.prototype.forEach.call(document.getElementsByClassName("os_macosx"), function(el) { el.style.display = "none"; })
+
+    Array.prototype.forEach.call(document.getElementsByClassName("os_" + os), function(el) { el.style.display = "inherit"; })
+
+    if (os == "none") document.getElementById("downloads").style.display = "none";
+    else document.getElementById("downloads").style.display = "inherit";
+
+    reloadDownloads();
+}
+
+function getOS() {
+    if (window.navigator.userAgent.includes("Windows")) return "windows";
+    if (window.navigator.userAgent.includes("Mac")) return "macosx";
+    if (window.navigator.userAgent.includes("Linux")) return "linux";
+    return "none";
+}
+
+let os_select = document.getElementById("os_select");
+os_select.addEventListener("change", function() {
+    let value = os_select.value;
+
+    updateOS(value);
+});
+
+let os = getOS();
+updateOS(os);
+for (let i = 0; i < os_select.options.length; i++) {
+    if (os_select.options[i].value == os) {
+        os_select.selectedIndex = i;
+    }
+}
+
 var showprereleases = document.getElementById("showprereleases");
 showprereleases.parentElement.style.display = "inline-block";
 showprereleases.addEventListener("change", function() {
     downloads.setAttribute("showprereleases", showprereleases.checked);
 });
-
-}
-
-homejs();

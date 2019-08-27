@@ -173,6 +173,15 @@
   animation: cover-down-pulse-anim-2 2s infinite;
 }
 
+#os_select {
+  display: inline-block;
+  height: 3em;
+}
+
+#installer_screen {
+  width: 45vw;
+}
+
 #main {
   margin-top: 100vh;
   background: #222222;
@@ -312,8 +321,12 @@
   filter: blur(0px);
 }
 
+.os_none, .os_macosx, .os_linux, .os_windows, #downloads {
+  display: none;
+}
+
 #download {
-  background: #4fb8a3;
+  background: #562C5C;
 }
 #download>[right] {
   width: 320px;
