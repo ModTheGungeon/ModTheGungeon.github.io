@@ -1,5 +1,5 @@
 - name: semi
-  versions_url: https://modthegungeon.eu/semi/semi-versions.yml
+  versions_url: "http://modthegungeon.eu/semi/semi-versions.yml"
 - name: semi-dev
-  versions_url: https://modthegungeon.eu/semi/semi-dev-versions.yml
+  versions_url: "http://modthegungeon.eu/semi/semi-dev-versions.yml"
 
