@@ -1,0 +1,4 @@
+- key: 0.1
+  name: Semi
+  url: "https://modthegungeon.eu/semi/BUILD/semi/0.1.zip"
+  requires_patched_exe: false

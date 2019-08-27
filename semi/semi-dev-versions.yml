@@ -1,0 +1,4 @@
+- key: 0.1-dev
+  name: Semi for Development
+  url: "https://modthegungeon.eu/semi/BUILD/semi-dev/0.1-dev.zip"
+  requires_patched_exe: false
