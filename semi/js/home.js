@@ -64,12 +64,13 @@ var downloads = document.getElementById("downloads");
 var downloadNewest;
 
 function reloadDownloads(os_name) {
-    Array.prototype.forEach.call(downloads.childNodes, function(el) {
+    let childNodes = downloads.childNodes;
+    for (let i = childNodes.length - 1; i >= 0; i--) {
         if (el.tagName != "A") return;
         console.log("delete child: ");
         console.log(el);
         downloads.removeChild(el);
-    });
+    }
 
     downloadNewest = null;
 
