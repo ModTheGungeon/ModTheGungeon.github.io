@@ -1,6 +1,4 @@
-// if (typeof mainY === "undefined") {
-//   setTimeout(homejs, 1000);
-// }
+function homejs() {
 
 document.getElementById("cover-outer").style.left = "0px";
 document.getElementById("pageversion").style.right = "16px";
@@ -67,7 +65,7 @@ function reloadDownloads(os_name) {
     let childNodes = downloads.childNodes;
     for (let i = childNodes.length - 1; i >= 0; i--) {
         let el = childNodes[i];
-        if (el.tagName != "A") return;
+        if (el.tagName != "A") continue;;
         console.log("delete child: ");
         console.log(el);
         downloads.removeChild(el);
@@ -166,3 +164,6 @@ showprereleases.parentElement.style.display = "inline-block";
 showprereleases.addEventListener("change", function() {
     downloads.setAttribute("showprereleases", showprereleases.checked);
 });
+
+}
+homejs();
