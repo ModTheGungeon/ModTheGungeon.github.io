@@ -66,6 +66,7 @@ var downloadNewest;
 function reloadDownloads(os_name) {
     let childNodes = downloads.childNodes;
     for (let i = childNodes.length - 1; i >= 0; i--) {
+        let el = childNodes[i];
         if (el.tagName != "A") return;
         console.log("delete child: ");
         console.log(el);
