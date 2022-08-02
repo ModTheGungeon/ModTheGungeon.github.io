@@ -16,6 +16,11 @@
   padding: 1px 8px 8px 16px;
 }
 
+.tutorialimage {
+	margin: 10px;
+	width: 40%;
+}
+
 li a {
   color: rgba(255, 255, 255, 0.87) !important;
   text-shadow: none;

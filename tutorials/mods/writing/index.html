@@ -56,5 +56,20 @@
 <div id="main-content">
     <body id="main">
 This page is not finished yet.
+		<h1>Getting Started</h1>
+		<p>Before you get started working on your cool mod for Enter the Gungeon you will need to do some prep work.</p>
+		<ul>
+			<li>First locate the UnityEngine.dll, Assembly-CSharp.dll, and the Assembly-CSharp.Base.mm.dll files in your EtG folder and move them somewhere near your mod files. 
+			This is mostly just to make a later step easier. They can be found in your Steam folder at Steam/steamapps/common/Enter the Gungeon/EtG_Data/Managed.</li>
+			<img class="tutorialimage" src="/img/DLLFiles.png">
+			<li>From there you can create your DLL. Enter the Gungeon is made in Unity using C# so will need to create a C# DLL. Windows Visual Studio calls their DLL's class libraries.</li>
+			<img class="tutorialimage" src="/img/DLLSelection.png">
+			<li>Now you are going to want to update your references, on the right side of your window you are going to want to right click on the references tab 
+			and click add reference. Then you just browse for your files and add the three files you just moved.</li>
+			<img class="tutorialimage" src="/img/FindingReferences.png">
+			<img class="tutorialimage" src="/img/SelectReferences.png">
+			<li>Once you've done that then you just need to create one more class for your mod called <your name>Controller. This name isn't necessary, but its good naming standards.</li>
+			<img class="tutorialimage" src="/img/AddingController.png">
+		</ul>
     </div></body>
 </html>
