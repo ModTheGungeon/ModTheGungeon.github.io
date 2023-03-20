@@ -12,6 +12,10 @@ body {
   z-index: 1;
   min-height: 100vh;
 }
+#bigboldnotice {
+  color: red;
+  font-size: xx-large;
+}
 
 * {
   box-sizing: border-box;
